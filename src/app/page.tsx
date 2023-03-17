@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import AboutMe from './AboutMe';
+import ScrollToNext from './ScrollToNext';
 import Skill from './Skill'
 import Works from './Works';
 
@@ -13,6 +14,7 @@ const Home = () => {
           <div className="mt-14 text-slate-500">  {/* header height 54px */}
             hello!
           </div>
+          <ScrollToNext />
         </div>
       </div>
 

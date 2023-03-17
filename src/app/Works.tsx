@@ -1,15 +1,17 @@
 import Image from "next/image";
+import parse from "html-react-parser";
 
-import { getWorks } from "../libs/microcms";
+import type { Works } from "../libs/microcms";
+import { getData } from "../libs/microcms";
 
 const Works = async () => {
-	const { contents }  = await getWorks();
+	const { contents }: Works  = await getData('works');
 
 	return (
 		<>
 			<div className="bg-sky-100">
-				<div className="container mx-auto py-6 text-slate-800">
-					<h2 className="mx-auto pb-6 text-center text-4xl">Works</h2>
+				<div className="container mx-auto py-12 text-slate-800">
+					<h2 className="mx-auto pb-12 text-center text-5xl font-extralight">Works</h2>
 					<div className="grid grid-cols-4 gap-4">
 						{contents.map((post) => {
 							return (
@@ -22,7 +24,7 @@ const Works = async () => {
 									/>
 									<div className="mt-2 text-center">
 										<h3 className="my-1">{post.title}</h3>
-										<p className="my-1">{post.contents}</p>
+										<div className="my-1">{parse(post.contents)}</div>
 									</div>
 								</div>
 							);

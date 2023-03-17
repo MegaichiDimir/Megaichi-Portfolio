@@ -1,3 +1,5 @@
+import "server-only";
+
 export type Skill = {
 	contents: [
 		{
@@ -38,34 +40,13 @@ if (!process.env.MICROCMS_API_KEY) {
 
 const url = `https://${process.env.MICROCMS_SERVICE_DOMAIN}.microcms.io/api/v1/`
 
-export const getSkill = async () => {
-	const endpoint = 'skill';
-	const fetchUrl = url + endpoint;
-	const res = await fetch(fetchUrl,{
-		headers: {
-			"X-MICROCMS-API-KEY": `${process.env.MICROCMS_API_KEY}`
-		} 
-	})
-	.then(r => r.json())
-	.then((data) => {
-		// console.log(data)
-		return data
-	});
-	// console.log(res);
-	return res as Promise<Skill>;
-}
-
-export const getWorks = async () => {
-	const endpoint = 'works'
+export const getData = async (props: string) => {
+	const endpoint = props
 	const fetchUrl = url + endpoint
-	const res = await fetch(fetchUrl,{
+	const res = await fetch(fetchUrl ,{
 		headers: {
 			"X-MICROCMS-API-KEY": `${process.env.MICROCMS_API_KEY}`
 		}
 	})
-	.then(r => r.json())
-	.then((data) => {
-		return data
-	});
-	return res as Promise<Works>;
+	return res.json();
 }

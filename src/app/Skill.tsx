@@ -1,15 +1,16 @@
 import Image from "next/image";
 
-import { getSkill } from "../libs/microcms";
+import { Skill } from "../libs/microcms";
+import { getData } from "../libs/microcms";
 
 const Skill = async () => {
-	const { contents }  = await getSkill();
+	const { contents }: Skill  = await getData('skill');
 	
 	return(
 		<>
 			<div className="bg-lime-100">
-				<div className="container mx-auto py-6 text-slate-800 ">
-					<h2 className="mx-auto pb-6 text-center text-4xl">Skills</h2>
+				<div className="container mx-auto py-12 text-slate-800 ">
+					<h2 className="mx-auto pb-12 text-center text-5xl font-extralight">Skills</h2>
 					<div className="grid grid-cols-4 gap-4">
 						{contents.map((post) => {
 							return (

@@ -1,17 +1,19 @@
 const AboutMe = () => {
 	return (
 		<>
-		<div className="bg-white">
-			<div className="container mx-auto py-6 text-slate-800">
-				<h2 className="mx-auto pb-6 text-center text-4xl">About Me</h2>
-				<div className="grid grid-cols-3 gap-4">
-					<div className="aspect-square bg-slate-200"></div>
-					<div className="col-start-2 col-span-2">
-						<p>textaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<div className="bg-white">
+				<div className="container mx-auto py-16 text-slate-800">
+					<h2 className="mx-auto pb-16 text-center text-5xl font-extralight">About Me</h2>
+					<div className="flex flex-wrap justify-center gap-4 mx-4 ">
+						<div className="w-44 mb-6 aspect-square bg-slate-200">
+
+						</div>
+						<div className="break-words">
+							<p>text text text text text text text text text text text text text text text text</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 		</>
 	)
 }
