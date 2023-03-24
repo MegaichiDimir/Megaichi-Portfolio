@@ -1,6 +1,6 @@
 import './globals.css'
 import Header from './header'
-import ScrollToTop from './ScrollToTop'
+import ScrollToTop from './components/ScrollToTop'
 
 export default function RootLayout({
   children,

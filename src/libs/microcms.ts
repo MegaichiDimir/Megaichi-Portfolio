@@ -19,13 +19,20 @@ export type Works = {
 	contents: [
 		{
 			id: string,
+			slug: string,
 			title: string,
-			contents: string,
 			thumbnail: {
 				url: string,
 				height: number,
 				width: number,
 			},
+			description: string,
+			contents: string,
+			links: {
+				url: string,
+				github: string,
+				preview: string,
+			}
 		}
 	]
 }
