@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 import { getData } from "../../libs/microcms";
-import type { Skill } from "../../libs/microcms";
+import type {Skill} from "@/libs/type";
 
 const SkillList = async () => {
-	const { contents }: Skill  = await getData('skill');
+	const { contents }: Skill  = await getData({endpoint: 'skill'});
 
 	return (
 		<>
