@@ -12,8 +12,10 @@ export default async function StaticPage() {
 
     return (
         <>
-            {/* @ts-ignore */}
-            <PostList contents={ contents } />
+            <div className="relative min-h-screen inset-0 bg-sky-100">
+                {/* @ts-ignore */}
+                <PostList contents={ contents } />
+            </div>
         </>
     );
 }

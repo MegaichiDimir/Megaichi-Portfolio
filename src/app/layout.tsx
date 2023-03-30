@@ -1,6 +1,6 @@
-import './globals.css'
-import Header from './header'
-import ScrollToTop from './components/ScrollToTop'
+import '@/app/globals.css'
+import Header from '@/app/components/header'
+import ScrollToTop from '@/app/components/ScrollToTop'
 
 export default function RootLayout({
   children,
