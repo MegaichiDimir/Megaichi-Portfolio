@@ -29,7 +29,7 @@ const ScrollToTop: React.FC = () => {
 
 	return (
 		<>
-			<div className={(isShow ? "opacity-1" : "opacity-0") + " fixed transition-opacity right-4 bottom-4"}>
+			<div className={(isShow ? "opacity-1" : "opacity-0") + " fixed z-10 transition-opacity right-4 bottom-4"}>
 				<button disabled={!isShow && !scrolling} onClick={toTop}>
 					<div className="p-3 rounded bg-slate-200 hover:bg-slate-100">
 						<SlArrowUp />

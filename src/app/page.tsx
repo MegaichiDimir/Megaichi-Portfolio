@@ -11,7 +11,7 @@ const Home = async () => {
 	return (
 		<main>
 			{/* mv */}
-			<div className="relative bottom-14 inline-block w-screen h-screen bg-teal-50">
+			<div className="relative bottom-14 inline-block w-full h-screen bg-teal-50">
 				<div className="flex flex-col justify-center items-center content-center w-full h-full">
 					<div className="mt-14 text-slate-500">  {/* header height 54px */}
 						hello!
@@ -35,7 +35,6 @@ const Home = async () => {
 			</div>
 			
 			{/* works */}
-			{/* @ts-ignore */}
 			<PostList contents={ contents } />
 		</main>
 	)

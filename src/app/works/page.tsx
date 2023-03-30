@@ -3,6 +3,7 @@ import type { Works } from "@/libs/type";
 
 import PostList from "../components/PostList";
 
+// 記事一覧ページ
 export default async function StaticPage() {
     const { contents }: Works = await getData({endpoint: 'works'});
 
@@ -12,9 +13,10 @@ export default async function StaticPage() {
 
     return (
         <>
-            <div className="relative min-h-screen inset-0 bg-sky-100">
-                {/* @ts-ignore */}
-                <PostList contents={ contents } />
+            <div className="relative bottom-14 min-h-screen bg-sky-100">
+                <div className="pt-12">
+                    <PostList contents={ contents } />
+                </div>
             </div>
         </>
     );

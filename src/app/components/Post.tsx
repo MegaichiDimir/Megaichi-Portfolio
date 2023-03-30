@@ -1,27 +1,37 @@
-'use client'
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import Modal from 'react-modal';
+import type { Works } from "@/libs/type";
 
-const Post = ({ id, pathname }: { id: string, pathname: string }) => {
-	const router = useRouter();
-	
-	useEffect(() => {
-		router.push(`/works/${pathname}`)
-	});
+// Modal, 個別リンク共通のレイアウト
+const Post = ( props : { post: Works['contents']['0'], parseContents: string | JSX.Element | JSX.Element[]}) => {
+	const post = props.post
+	const contents = props.parseContents
 
 	return (
 		<>
-			<Modal
-				isOpen={true}
-				onRequestClose={() => router.push('/')}
-				overlayClassName="fixed inset-0 bg-black bg-opacity-50"
-				className="fixed inset-0 bg-white"
-			>
-				<div>
-					I am the post {id}; my pathname is: {pathname}
+			<div className="">
+				<div className="flex flex-col md:flex-row md:items-end gap-4 pb-10">
+					<h1 className="text-5xl font-bold">{post.title}</h1>
+					<div className="text-xl">{post.description}</div>
 				</div>
-			</Modal>
+				<div className="flex flex-col md:flex-row gap-6 w-full">
+					
+					<div className="flex-1 w-full" >{contents}</div>
+					<div className="flex flex-col mt-12 md:mt-0 w-72">
+						<div className="mb-12">
+							<h3>Link</h3>
+							<div>
+								
+							</div>
+						</div>
+						<div>
+							<h3>使用ライブラリなど</h3>
+							<div>
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
 		</>
 
 	)

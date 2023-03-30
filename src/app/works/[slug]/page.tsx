@@ -2,7 +2,9 @@ import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getData } from "@/libs/microcms";
 import type { Works } from "@/libs/type";
+import Post from "@/app/components/Post";
 
+// SSGのルーティング設定
 export async function generateStaticParams() {
 	const { contents }: Works = await getData({endpoint: "works"});
 
@@ -15,6 +17,7 @@ export async function generateStaticParams() {
 	return [...paths];
 }
 
+// ページのコンポーネント
 export default async function StaticDetailPage({
 	params: { slug },
 }: {
@@ -28,10 +31,10 @@ export default async function StaticDetailPage({
 	}
 
 	return (
-		<div>
-			<h1>{post.title}</h1>
-
-			<div>{parse(post.contents)}</div>
-		</div>
+		<>
+			<div className="container mx-auto mt-6">
+				<Post post={post} parseContents={parse(post.contents)}/>
+			</div>
+		</>
 	);
 }
