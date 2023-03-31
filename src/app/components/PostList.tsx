@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
 
 import type { Works } from "@/libs/type";
 import ModalPage from "./ModalPage";
@@ -17,7 +16,7 @@ const PostList = ( props: Works ) => {
 					<div className="grid grid-cols-2  gap-4 mx-1">
 						{contents.map((post) => {
 							return (
-								<div key={post.id} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 transition-colors">
+								<div key={post.id} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 rounded-xl transition-colors">
 										<ModalPage post={post}>
 											<Image
 												className="sm:w-auto sm:max-h-full object-cover sm:overflow-hidden drop-shadow"
@@ -34,6 +33,8 @@ const PostList = ( props: Works ) => {
 												Modal?
 											</Link> */}
 										</ModalPage>
+										{/* SEO対策の非表示リンク */}
+										<Link href={`works/${post.slug}`} prefetch={false} className="hidden">Link</Link>
 								</div>
 							)
 						})}

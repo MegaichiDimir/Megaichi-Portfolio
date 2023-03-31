@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getData } from "@/libs/microcms";
@@ -17,6 +18,20 @@ export async function generateStaticParams() {
 	return [...paths];
 }
 
+// メタデータの生成
+export async function generateMetadata({
+	params,
+  }: {
+	params: { slug: string };
+  }) {
+	const { contents }: Works = await getData({endpoint: "works", queries: `?filters=slug%5Bequals%5D${params.slug}`});
+	const post = contents['0'];
+
+	return {
+		title: post.title,
+		description: post.description,
+  	};
+}
 // ページのコンポーネント
 export default async function StaticDetailPage({
 	params: { slug },
@@ -33,7 +48,13 @@ export default async function StaticDetailPage({
 	return (
 		<>
 			<div className="container mx-auto mt-6">
-				<Post post={post} parseContents={parse(post.contents)}/>
+				{/* パンくずリスト */}
+				<ul className="mb-6 whitespace-nowrap text-sm text-slate-500">
+					<li className="inline"><Link href={`/`} className="hover:text-slate-800 hover:underline">Home</Link><span> / </span></li>
+					<li className="inline"><Link href={`/works`} className="hover:text-slate-800 hover:underline">Works</Link><span> / </span></li>
+					<li className="inline"><Link href={`/works/${slug}`} className="hover:text-slate-800 hover:underline">{post.title}</Link></li>
+				</ul>
+				<Post post={post} parseContents={parse(post.contents)} parseSidebar={parse(post.sidebar)}/>
 			</div>
 		</>
 	);

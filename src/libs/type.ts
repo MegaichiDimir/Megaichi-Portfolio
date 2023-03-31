@@ -26,11 +26,13 @@ export type Works = {
 			},
 			description: string,
 			contents: string,
+			sidebar: string,
 			links: {
-				url: string,
-				github: string,
-				preview: string,
-			}
+				url: string | undefined,
+				github: string | undefined,
+				preview: string | undefined,
+				preview_desc: string | undefined,
+			} | undefined
 		}
 	]
 }

@@ -1,35 +1,55 @@
+import { FaGithub } from "react-icons/fa";
+
 import type { Works } from "@/libs/type";
 
 // Modal, 個別リンク共通のレイアウト
-const Post = ( props : { post: Works['contents']['0'], parseContents: string | JSX.Element | JSX.Element[]}) => {
+const Post = (
+	props: {
+		post: Works['contents']['0'],
+		parseContents: string | JSX.Element | JSX.Element[],
+		parseSidebar: string | JSX.Element | JSX.Element[]
+	}) => {
 	const post = props.post
 	const contents = props.parseContents
-
+	const sidebar = props.parseSidebar
+	
 	return (
 		<>
-			<div className="">
-				<div className="flex flex-col md:flex-row md:items-end gap-4 pb-10">
-					<h1 className="text-5xl font-bold">{post.title}</h1>
-					<div className="text-xl">{post.description}</div>
-				</div>
-				<div className="flex flex-col md:flex-row gap-6 w-full">
-					
-					<div className="flex-1 w-full" >{contents}</div>
-					<div className="flex flex-col mt-12 md:mt-0 w-72">
-						<div className="mb-12">
-							<h3>Link</h3>
-							<div>
-								
-							</div>
+			<div className="flex flex-col md:flex-row md:items-end gap-4 mb-2">
+				<h1 className="text-5xl font-bold">{post.title}</h1>
+				<div className="text-xl">{post.description}</div>
+			</div>
+			{post.links
+				?	<div className="flex flex-row gap-6 text-sky-600">
+						<div>
+							{post.links.url
+								? 	<a href={post.links.url} target="_blank" className="flex flex-row items-center gap-1 hover:underline">
+										Product Page
+									</a> 
+								: 	""}
 						</div>
 						<div>
-							<h3>使用ライブラリなど</h3>
-							<div>
-								
-							</div>
+							{post.links.github
+								? 	<a href={post.links.github} target="_blank" className="flex flex-row items-center gap-1 hover:underline">
+										<FaGithub className="text-slate-800"/>GitHub
+									</a> 
+								: 	""}
+						</div>
+						<div>
+							{post.links.preview
+								?   <a href={post.links.preview} target="_blank" className="flex flex-row items-center gap-1 hover:underline">
+										{post.links.preview_desc}
+									</a> 
+								: 	""}
 						</div>
 					</div>
-					
+				: 	""
+			}
+			<div className="mt-4 mb-6 w-full border-t border-solid border-slate-300"></div>
+			<div className="grid grid-cols-1 md:grid-cols-[1fr,12rem] gap-6 md:divide-x divide-slate-300 w-full max-h-auto">
+				<div className="w-full md:overflow-y-auto" >{contents}</div>
+				<div className="mt-3 md:mt-0 pt-3 md:pt-0 md:pl-6 text-sm border-t border-solid border-slate-300 md:border-0">
+					<div className="md:sticky md:top-0">{sidebar}</div>
 				</div>
 			</div>
 		</>
