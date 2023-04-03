@@ -1,9 +1,15 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getData } from "@/libs/microcms";
 import type { Works } from "@/libs/type";
 import Post from "@/app/components/Post";
+
+type Props = {
+	params: { slug: string };
+	searchParams: { [key: string]: string | string[] | undefined };
+};
 
 // SSGのルーティング設定
 export async function generateStaticParams() {
@@ -19,25 +25,22 @@ export async function generateStaticParams() {
 }
 
 // メタデータの生成
-export async function generateMetadata({
-	params,
-  }: {
-	params: { slug: string };
-  }) {
-	const { contents }: Works = await getData({endpoint: "works", queries: `?filters=slug%5Bequals%5D${params.slug}`});
+export async function generateMetadata(
+	{ params }: Props
+ ): Promise<Metadata> {
+	const slug = params.slug;
+	const { contents }: Works = await getData({endpoint: "works", queries: `?filters=slug%5Bequals%5D${slug}`});
 	const post = contents['0'];
 
 	return {
 		title: post.title,
 		description: post.description,
-  	};
+	};
 }
-// ページのコンポーネント
-export default async function StaticDetailPage({
-	params: { slug },
-}: {
-	params: { slug: string };
-}) {
+
+// Staticページのコンポーネント
+export default async function StaticDetailPage(
+	{ params: { slug } }: Props ) {
 	const { contents }: Works = await getData({endpoint: "works", queries: `?filters=slug%5Bequals%5D${slug}`});
 	const post = contents['0'];
 

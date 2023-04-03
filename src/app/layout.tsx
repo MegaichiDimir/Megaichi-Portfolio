@@ -2,6 +2,14 @@ import '@/app/globals.css'
 import Header from '@/app/components/header'
 import ScrollToTop from '@/app/components/ScrollToTop'
 
+export const metadata = {
+  title: {
+    default: 'Megaichi\'s Portfolio',
+    template: '%s | Megaichi\'s Portfolio',
+  },
+  description: 'Megaichiのポートフォリオサイト。WEBフロントエンドを中心に、様々な分野を学習しています。',
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -9,11 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+      <head/>
       <body>
         <Header/>
         {children}

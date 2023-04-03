@@ -17,24 +17,21 @@ const PostList = ( props: Works ) => {
 						{contents.map((post) => {
 							return (
 								<div key={post.id} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 rounded-xl transition-colors">
-										<ModalPage post={post}>
-											<Image
-												className="sm:w-auto sm:max-h-full object-cover sm:overflow-hidden drop-shadow"
-												src={post.thumbnail.url}
-												alt={post.title}
-												width={post.thumbnail.width}
-												height={post.thumbnail.height} 
-											/>
-											<div className="mt-2 col-start-2 col-end-4">
-												<h3 className="my-1 text-center sm:text-left">{post.title}</h3>
-												<div className="my-1 w-full"><p className="">{post.description}</p></div>
-											</div>
-											{/* <Link href={`/?postId=${post.id}`} as={`works/${post.slug}`}>
-												Modal?
-											</Link> */}
-										</ModalPage>
-										{/* SEO対策の非表示リンク */}
-										<Link href={`works/${post.slug}`} prefetch={false} className="hidden">Link</Link>
+									<ModalPage post={post}>
+										<Image
+											className="sm:w-auto sm:max-h-full object-cover sm:overflow-hidden drop-shadow"
+											src={post.thumbnail.url}
+											alt={post.title}
+											width={post.thumbnail.width}
+											height={post.thumbnail.height} 
+										/>
+										<div className="mt-2 col-start-2 col-end-4">
+											<h3 className="my-1 text-center sm:text-left">{post.title}</h3>
+											<div className="my-1 w-full"><p className="">{post.description}</p></div>
+										</div>
+									</ModalPage>
+									{/* SEO対策の非表示リンク */}
+									<Link href={`works/${post.slug}`} prefetch={false} className="hidden">Link</Link>
 								</div>
 							)
 						})}

@@ -3,6 +3,10 @@ import type { Works } from "@/libs/type";
 
 import PostList from "../components/PostList";
 
+export const metadata = {
+    title: 'Works',
+}
+
 // 記事一覧ページ
 export default async function StaticPage() {
     const { contents }: Works = await getData({endpoint: 'works'});
