@@ -1,7 +1,7 @@
 import { getData } from "@/libs/microcms";
 import type { Works } from "@/libs/type";
 
-import PostList from "../components/PostList";
+import PostList from "@/app/components/4_Works/PostList";
 
 export const metadata = {
     title: 'Works',

@@ -1,5 +1,5 @@
 import '@/app/globals.css'
-import Header from '@/app/components/header'
+import Header from '@/app/components/Header'
 import ScrollToTop from '@/app/components/ScrollToTop'
 
 export const metadata = {

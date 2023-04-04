@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { Works } from "@/libs/type";
-import ModalPage from "./ModalPage";
+import ModalPage from "@/app/components/4_Works/ModalPage";
 
 
 const PostList = ( props: Works ) => {

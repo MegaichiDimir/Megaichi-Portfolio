@@ -1,9 +1,10 @@
-import AboutMe from './components/AboutMe';
-import ScrollToNext from './components/ScrollToNext';
-import PostList from '@/app/components/PostList';
-import SkillList from '@/app/components/SkillList';
 import { getData } from '@/libs/microcms';
 import type { Works } from "@/libs/type";
+
+import ScrollToNext from '@/app/components/1_MV/ScrollToNext';
+import AboutMe from '@/app/components/2_AboutMe/AboutMe';
+import SkillList from '@/app/components/3_Skills/SkillList';
+import PostList from '@/app/components/4_Works/PostList';
 
 const Home = async () => {
 	const { contents }: Works = await getData({endpoint: 'works'});
