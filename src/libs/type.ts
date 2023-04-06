@@ -1,3 +1,13 @@
+export type Profile = {
+	image: {
+		url: string,
+		height: number,
+		width: number,
+	},
+	name: string,
+	contents: string,
+}
+
 export type Skill = {
 	contents: [
 		{
@@ -36,3 +46,4 @@ export type Works = {
 		}
 	]
 }
+

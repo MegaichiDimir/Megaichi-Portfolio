@@ -1,3 +1,5 @@
+import localFont from 'next/font/local'
+
 import { getData } from '@/libs/microcms';
 import type { Works } from "@/libs/type";
 
@@ -8,6 +10,10 @@ import PostList from '@/app/components/4_Works/PostList';
 
 const Home = async () => {
 	const { contents }: Works = await getData({endpoint: 'works'});
+	const myFont = localFont({
+		src: '@/assets/fonts/hack-regular-subset.woff2',
+		display: 'swap',
+	});
 
 	return (
 		<main>
@@ -22,6 +28,7 @@ const Home = async () => {
 			</div>
 
 			{/* About Me */}
+			{/* @ts-ignore */}
 			<AboutMe />
 			
 			{/* skill */}
