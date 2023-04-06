@@ -52,7 +52,7 @@ const ModalPage = ( props: Props ) => {
 					</div>
 					<div className="block mt-auto px-7 pt-6 md:pt-4">
 						<Link href={pathname} className="inline mt-auto">
-							<div className="mt-auto md:mt-4 flex flex-row items-center text-xl font-light text-slate-600 hover:text-slate-900">
+							<div className="mt-auto md:mt-4 flex flex-row items-center text-xl font-medium text-slate-600 hover:text-slate-900">
 								<MdArrowBackIosNew/><span className="pb-[0.146em]">Back</span>
 							</div>
 						</Link>

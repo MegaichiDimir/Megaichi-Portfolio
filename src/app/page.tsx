@@ -1,5 +1,3 @@
-import localFont from 'next/font/local'
-
 import { getData } from '@/libs/microcms';
 import type { Works } from "@/libs/type";
 
@@ -8,20 +6,18 @@ import AboutMe from '@/app/components/2_AboutMe/AboutMe';
 import SkillList from '@/app/components/3_Skills/SkillList';
 import PostList from '@/app/components/4_Works/PostList';
 
+
+
 const Home = async () => {
 	const { contents }: Works = await getData({endpoint: 'works'});
-	const myFont = localFont({
-		src: '@/assets/fonts/hack-regular-subset.woff2',
-		display: 'swap',
-	});
 
 	return (
 		<main>
 			{/* mv */}
 			<div className="relative bottom-14 inline-block w-full h-screen bg-teal-50">
 				<div className="flex flex-col justify-center items-center content-center w-full h-full">
-					<div className="mt-14 text-slate-500">  {/* header height 54px */}
-						hello!
+					<div className={`mt-14 text-slate-500 text-6xl font-medium`}>  {/* header height 54px */}
+						Megaichi&apos;s portfolio
 					</div>
 					<ScrollToNext />
 				</div>

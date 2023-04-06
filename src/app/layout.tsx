@@ -1,6 +1,8 @@
+import { roboto, noto_sans_jp } from './fonts'
 import '@/app/globals.css'
-import Header from '@/app/components/Header'
+import Header from '@/app/components/header'
 import ScrollToTop from '@/app/components/ScrollToTop'
+
 
 export const metadata = {
   title: {
@@ -16,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable}`}>
       <head/>
       <body>
         <Header/>

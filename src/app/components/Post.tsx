@@ -20,24 +20,24 @@ const Post = (
 				<div className="text-xl">{post.description}</div>
 			</div>
 			{post.links
-				?	<div className="flex flex-row gap-6 text-sky-600">
+				?	<div className="flex flex-row gap-6">
 						<div>
 							{post.links.url
-								? 	<a href={post.links.url} target="_blank" className="flex flex-row items-center gap-1 hover:underline">
+								? 	<a href={post.links.url} target="_blank" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
 										Product Page
 									</a> 
 								: 	""}
 						</div>
 						<div>
 							{post.links.github
-								? 	<a href={post.links.github} target="_blank" className="flex flex-row items-center gap-1 hover:underline">
+								? 	<a href={post.links.github} target="_blank" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
 										<FaGithub className="text-slate-800"/>GitHub
 									</a> 
 								: 	""}
 						</div>
 						<div>
 							{post.links.preview
-								?   <a href={post.links.preview} target="_blank" className="flex flex-row items-center gap-1 hover:underline">
+								?   <a href={post.links.preview} target="_blank" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
 										{post.links.preview_desc}
 									</a> 
 								: 	""}
