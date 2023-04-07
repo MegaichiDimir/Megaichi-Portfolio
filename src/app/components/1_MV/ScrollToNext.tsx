@@ -1,21 +1,14 @@
 'use client';
-
+import { Link as Scroll } from 'react-scroll';
 import { SlArrowDown } from "react-icons/sl";
 
 const ScrollToNext = () => {
-		const toNext = () => {
-			window.scrollTo({
-				top: window.innerHeight,
-				behavior: 'smooth'
-			})
-		}
-
 	return (
 		<>
 			<div className="animate-bounce absolute bottom-8 text-center text-slate-500">
-				<button className="text-4xl" onClick={toNext}>
+				<Scroll to='about-me' smooth={true} duration={600} className="text-4xl">
 					<SlArrowDown />
-				</button>
+				</Scroll>
 			</div>
 		</>
 	)

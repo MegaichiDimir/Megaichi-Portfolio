@@ -1,15 +1,15 @@
 'use client';
 import { useState, useEffect } from "react";
+import { Link as Scroll } from 'react-scroll';
 import { SlArrowUp } from "react-icons/sl";
 
 const ScrollToTop: React.FC = () => {
 	const [isShow, setIsShow] = useState(false);
-	const [scrolling, setScrolling] = useState(false);
 
 	const toggleShow = () => {
 		window.scrollY > 100
 			? setIsShow(true)
-			: setIsShow(false)
+			: setTimeout(() => setIsShow(false), 150)
 	}
 
 	useEffect(() => {
@@ -17,24 +17,17 @@ const ScrollToTop: React.FC = () => {
 		return () => window.removeEventListener('scroll', toggleShow)
 	}, [])
 
-	const toTop = () => {
-		setScrolling(true)
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth'
-		})
-		// buttonがdisabledになるとスクロールが停止する(chromeのみ確認)ため、遅延させる
-		setTimeout(() => setScrolling(false), 1500)
-	}
-
 	return (
 		<>
 			<div className={(isShow ? "opacity-1" : "opacity-0") + " fixed z-10 transition-opacity right-4 bottom-4"}>
-				<button disabled={!isShow && !scrolling} onClick={toTop}>
-					<div className="p-3 rounded bg-slate-200 hover:bg-slate-100">
-						<SlArrowUp />
-					</div>
-				</button>
+				{isShow === true
+					?	<Scroll to="header" smooth={true} duration={600}>
+							<div className="p-3 rounded bg-slate-200 hover:bg-slate-100 text-slate-900 hover:text-slate-500">
+								<SlArrowUp />
+							</div>
+						</Scroll>
+					:	<></>
+				}
 			</div>
 		</>
 	)

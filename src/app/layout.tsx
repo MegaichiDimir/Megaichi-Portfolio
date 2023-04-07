@@ -1,6 +1,6 @@
 import { roboto, noto_sans_jp } from './fonts'
 import '@/app/globals.css'
-import Header from '@/app/components/header'
+import Header from '@/app/components/Header'
 import ScrollToTop from '@/app/components/ScrollToTop'
 
 
@@ -19,7 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable}`}>
-      <head/>
+      <head>
+      </head>
       <body>
         <Header/>
         {children}

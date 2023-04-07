@@ -1,7 +1,7 @@
 import { getData } from '@/libs/microcms';
 import type { Works } from "@/libs/type";
 
-import ScrollToNext from '@/app/components/1_MV/ScrollToNext';
+import MV from '@/app/components/1_MV/MV';
 import AboutMe from '@/app/components/2_AboutMe/AboutMe';
 import SkillList from '@/app/components/3_Skills/SkillList';
 import PostList from '@/app/components/4_Works/PostList';
@@ -15,20 +15,17 @@ const Home = async () => {
 		<main>
 			{/* mv */}
 			<div className="relative bottom-14 inline-block w-full h-screen bg-teal-50">
-				<div className="flex flex-col justify-center items-center content-center w-full h-full">
-					<div className={`mt-14 text-slate-500 text-6xl font-medium`}>  {/* header height 54px */}
-						Megaichi&apos;s portfolio
-					</div>
-					<ScrollToNext />
-				</div>
+				<MV />
 			</div>
 
 			{/* About Me */}
-			{/* @ts-ignore */}
-			<AboutMe />
+			<div id="about-me">
+				{/* @ts-ignore */}
+				<AboutMe />
+			</div>
 			
 			{/* skill */}
-			<div className="bg-lime-100">
+			<div id='skills' className="bg-lime-100">
 				<div className="container mx-auto py-12 text-slate-800 ">
 					<h2 className="mx-auto pb-12 text-center text-5xl font-extralight">Skills</h2>
 					<div className="grid grid-cols-3 sm:grid-cols-4 gap-4 mx-1">
@@ -39,7 +36,9 @@ const Home = async () => {
 			</div>
 			
 			{/* works */}
-			<PostList contents={ contents } />
+			<div id="works">
+				<PostList contents={ contents } />
+			</div>
 		</main>
 	)
 }
