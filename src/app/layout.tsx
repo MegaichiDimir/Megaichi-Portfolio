@@ -1,3 +1,4 @@
+import React from 'react'
 import { roboto, noto_sans_jp } from './fonts'
 import '@/app/globals.css'
 import Header from '@/app/components/Header'
@@ -12,11 +13,9 @@ export const metadata = {
   description: 'Megaichiのポートフォリオサイト。WEBフロントエンドを中心に、様々な分野を学習しています。',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout(
+  { children, modal }: { children: React.ReactNode, modal: React.ReactNode }
+  ) {
   return (
     <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable}`}>
       <head>
@@ -24,6 +23,7 @@ export default function RootLayout({
       <body>
         <Header/>
         {children}
+        {modal}
         <ScrollToTop/>
       </body>
     </html>

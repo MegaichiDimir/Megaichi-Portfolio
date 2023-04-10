@@ -30,12 +30,11 @@ const PostList = ( props: Works ) => {
 											<div className="my-1 w-full"><p className="">{post.description}</p></div>
 										</div>
 									</ModalPage>
-									{/* SEO対策の非表示リンク */}
-									<Link href={`works/${post.slug}`} prefetch={false} className="hidden">Link</Link>
 								</div>
 							)
 						})}
 					</div>
+					<Link href={`works/ultimate-id-reader`} className="">Link</Link>
 				</div>
 			</div>
 		</>

@@ -1,17 +1,15 @@
 import { Metadata } from "next";
-import Link from "next/link";
-import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 
 import { getData } from "@/libs/microcms";
 import type { Works } from "@/libs/type";
 
+import Modal from "@/app/components/modal_test/modal";
 import Post from "@/app/components/Post";
 
 type Props = {
 	params: { slug: string };
-	searchParams: { [key: string]: string | string[] | undefined };
-};
+}
 
 // SSGのルーティング設定
 export async function generateStaticParams() {
@@ -40,27 +38,17 @@ export async function generateMetadata(
 	};
 }
 
-// Staticページのコンポーネント
-export default async function StaticDetailPage(
-	{ params: { slug } }: Props ) {
-	const { contents }: Works = await getData({endpoint: "works", queries: `?filters=slug%5Bequals%5D${slug}`});
+export default async function ModalPost ({params: { slug: slug }}: Props) {
+	const { contents }: Works = await getData({endpoint: 'works', queries: `?filters=slug%5Bequals%5D${slug}`});
 	const post = contents['0'];
-
-	if (!post) {
-		notFound();
-	}
 
 	return (
 		<>
-			<div className="container mx-auto mt-6">
-				{/* パンくずリスト */}
-				<ul className="mb-6 whitespace-nowrap text-sm text-slate-500">
-					<li className="inline"><Link href={`/`} className="hover:text-slate-800 hover:underline">Home</Link><span> / </span></li>
-					<li className="inline"><Link href={`/works`} className="hover:text-slate-800 hover:underline">Works</Link><span> / </span></li>
-					<li className="inline"><Link href={`/works/${slug}`} className="hover:text-slate-800 hover:underline">{post.title}</Link></li>
-				</ul>
+			Modal Open
+			<Modal>
 				<Post post={post} parseContents={parse(post.contents)} parseSidebar={parse(post.sidebar)}/>
-			</div>
+			</Modal>
 		</>
-	);
+
+	)
 }
