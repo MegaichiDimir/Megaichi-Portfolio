@@ -1,14 +1,14 @@
 'use client'
-import { ReactNode } from "react";
+import parse from "html-react-parser";
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import Modal from 'react-modal';
-import parse from "html-react-parser";
+import { ReactNode } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { MdArrowBackIosNew } from 'react-icons/md'
+import Modal from 'react-modal';
 
+import Post from "@/components/Post";
 import type { Works } from "@/libs/type";
-import Post from "@/app/components/Post";
 
 
 type Props = {

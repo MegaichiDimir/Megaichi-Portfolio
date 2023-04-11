@@ -1,6 +1,6 @@
 'use client';
-import { Link as Scroll } from 'react-scroll';
 import { SlArrowDown } from "react-icons/sl";
+import { Link as Scroll } from 'react-scroll';
 
 const ScrollToNext = () => {
 	return (

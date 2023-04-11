@@ -1,14 +1,12 @@
+import AboutMe from '@/components/aboutMe/AboutMe';
+import MV from '@/components/mv/MV';
+import SkillList from '@/components/skills/SkillList';
+import PostList from '@/components/works/PostList';
 import { getData } from '@/libs/microcms';
 import type { Works } from "@/libs/type";
 
-import MV from '@/app/components/1_MV/MV';
-import AboutMe from '@/app/components/2_AboutMe/AboutMe';
-import SkillList from '@/app/components/3_Skills/SkillList';
-import PostList from '@/app/components/4_Works/PostList';
 
-
-
-const Home = async () => {
+export default async function Home () {
 	const { contents }: Works = await getData({endpoint: 'works'});
 
 	return (
@@ -42,5 +40,3 @@ const Home = async () => {
 		</main>
 	)
 }
-
-export default Home;

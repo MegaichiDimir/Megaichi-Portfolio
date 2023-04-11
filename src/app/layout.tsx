@@ -1,8 +1,8 @@
 import React from 'react'
 import { roboto, noto_sans_jp } from './fonts'
 import '@/app/globals.css'
-import Header from '@/app/components/Header'
-import ScrollToTop from '@/app/components/ScrollToTop'
+import Header from '@/components/Header'
+import ScrollToTop from '@/components/ScrollToTop'
 
 
 export const metadata = {
@@ -14,16 +14,14 @@ export const metadata = {
 }
 
 export default function RootLayout(
-  { children, modal }: { children: React.ReactNode, modal: React.ReactNode }
+  props: { children: React.ReactNode, modal: any }
   ) {
   return (
     <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable}`}>
-      <head>
-      </head>
       <body>
         <Header/>
-        {children}
-        {modal}
+        {props.children}
+        {props.modal}
         <ScrollToTop/>
       </body>
     </html>

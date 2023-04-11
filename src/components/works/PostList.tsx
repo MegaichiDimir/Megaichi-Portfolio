@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { Works } from "@/libs/type";
-import ModalPage from "@/app/components/4_Works/ModalPage";
+// import ModalPage from "@/components/4_Works/ModalPage";
 
 
 const PostList = ( props: Works ) => {
@@ -17,7 +17,7 @@ const PostList = ( props: Works ) => {
 						{contents.map((post) => {
 							return (
 								<div key={post.id} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 rounded-xl transition-colors">
-									<ModalPage post={post}>
+									{/* <ModalPage post={post}>
 										<Image
 											className="sm:w-auto sm:max-h-full object-cover sm:overflow-hidden drop-shadow"
 											src={post.thumbnail.url}
@@ -29,12 +29,12 @@ const PostList = ( props: Works ) => {
 											<h3 className="my-1 text-center sm:text-left">{post.title}</h3>
 											<div className="my-1 w-full"><p className="">{post.description}</p></div>
 										</div>
-									</ModalPage>
+									</ModalPage> */}
+									<Link href={`works/${post.slug}`} className="">Link</Link>
 								</div>
 							)
 						})}
 					</div>
-					<Link href={`works/ultimate-id-reader`} className="">Link</Link>
 				</div>
 			</div>
 		</>

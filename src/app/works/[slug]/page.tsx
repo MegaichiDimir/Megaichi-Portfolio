@@ -1,12 +1,12 @@
+import parse from "html-react-parser";
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import parse from "html-react-parser";
 
+import Post from "@/components/Post";
 import { getData } from "@/libs/microcms";
 import type { Works } from "@/libs/type";
 
-import Post from "@/app/components/Post";
 
 type Props = {
 	params: { slug: string };
