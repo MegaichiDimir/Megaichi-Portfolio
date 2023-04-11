@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { getData } from '@/libs/microcms';
 import type { Works } from "@/libs/type";
-// import ModalPage from "@/components/4_Works/ModalPage";
 
 
 const PostList = async () => {
@@ -18,7 +17,10 @@ const PostList = async () => {
 						{contents.map((post) => {
 							return (
 								<div key={post.id} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 rounded-xl transition-colors">
-									{/* <ModalPage post={post}>
+									<Link
+										href={`works/${post.slug}`} 
+										className="w-full sm:h-40 min-h-0 flex flex-col sm:flex-row gap-1 sm:gap-4 items-center p-4"
+									>
 										<Image
 											className="sm:w-auto sm:max-h-full object-cover sm:overflow-hidden drop-shadow"
 											src={post.thumbnail.url}
@@ -30,8 +32,7 @@ const PostList = async () => {
 											<h3 className="my-1 text-center sm:text-left">{post.title}</h3>
 											<div className="my-1 w-full"><p className="">{post.description}</p></div>
 										</div>
-									</ModalPage> */}
-									<Link href={`works/${post.slug}`} className="">Link</Link>
+									</Link>
 								</div>
 							)
 						})}

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import Post from "@/components/Post";
-import Modal from "@/components/modal_test/modal";
+import Modal from "@/components/modal/Modal";
 import { getData } from "@/libs/microcms";
 import type { Works } from "@/libs/type";
 

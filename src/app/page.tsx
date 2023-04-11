@@ -2,13 +2,9 @@ import AboutMe from '@/components/aboutMe/AboutMe';
 import MV from '@/components/mv/MV';
 import SkillList from '@/components/skills/SkillList';
 import PostList from '@/components/works/PostList';
-import { getData } from '@/libs/microcms';
-import type { Works } from "@/libs/type";
 
 
-export default async function Home () {
-	const { contents }: Works = await getData({endpoint: 'works'});
-
+export default function Home () {
 	return (
 		<main>
 			{/* mv */}

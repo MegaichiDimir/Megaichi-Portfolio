@@ -26,7 +26,7 @@ const ModalPage = ( props: Props ) => {
 	return (
 		<>
 			<Link
-				href={`${pathname}?works=${post.slug}`} 
+				href={`/works/${post.slug}`} 
 				className="w-full sm:h-40 min-h-0 flex flex-col sm:flex-row gap-1 sm:gap-4 items-center p-4"
 			>
 				{props.children}
