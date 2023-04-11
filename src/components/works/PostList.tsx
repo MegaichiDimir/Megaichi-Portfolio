@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { getData } from '@/libs/microcms';
 import type { Works } from "@/libs/type";
 // import ModalPage from "@/components/4_Works/ModalPage";
 
 
-const PostList = ( props: Works ) => {
-	const contents = props.contents;
+const PostList = async () => {
+	const { contents }: Works = await getData({endpoint: 'works'});
 
 	return(
 		<>

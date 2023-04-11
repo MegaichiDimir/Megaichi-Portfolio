@@ -8,18 +8,14 @@ export const metadata = {
 }
 
 // 記事一覧ページ
-export default async function StaticPage() {
-    const { contents }: Works = await getData({endpoint: 'works'});
-
-    if (!contents) {
-        return <h1>No contents</h1>;
-    }
+export default function StaticPage() {
 
     return (
         <>
             <div className="relative bottom-14 min-h-screen bg-sky-100">
                 <div className="pt-12">
-                    <PostList contents={ contents } />
+                    {/* @ts-ignore */}
+                    <PostList />
                 </div>
             </div>
         </>

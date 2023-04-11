@@ -13,17 +13,17 @@ type Props = {
 }
 
 // SSGのルーティング設定
-// export async function generateStaticParams() {
-// 	const { contents }: Works = await getData({endpoint: "works"});
+export async function generateStaticParams() {
+	const { contents }: Works = await getData({endpoint: "works"});
 
-// 	const paths = contents.map((post) => {
-// 		return {
-// 			slug: post.slug,
-// 		};
-// 	});
+	const paths = contents.map((post) => {
+		return {
+			slug: post.slug,
+		};
+	});
 
-// 	return [...paths];
-// }
+	return [...paths];
+}
 
 // メタデータの生成
 export async function generateMetadata(
@@ -39,7 +39,7 @@ export async function generateMetadata(
 	};
 }
 
-export default async function ModalPost ({params: { slug: slug }}: Props) {
+export default async function InterceptedModal ({params: { slug: slug }} : Props) {
 	const { contents }: Works = await getData({endpoint: 'works'});
 	const post = contents.find((post) => post.slug === slug);
 
@@ -49,7 +49,6 @@ export default async function ModalPost ({params: { slug: slug }}: Props) {
 
 	return (
 		<>
-			<div>Modal Open</div>
 			<Modal>
 				<Post post={post} parseContents={parse(post.contents)} parseSidebar={parse(post.sidebar)}/>
 			</Modal>

@@ -13,8 +13,8 @@ export const metadata = {
   description: 'Megaichiのポートフォリオサイト。WEBフロントエンドを中心に、様々な分野を学習しています。',
 }
 
-export default function RootLayout(
-  props: { children: React.ReactNode, modal: any }
+export default function Layout(
+  props: { children: React.ReactNode, modal: React.ReactNode }
   ) {
   return (
     <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable}`}>

@@ -35,7 +35,8 @@ export default async function Home () {
 			
 			{/* works */}
 			<div id="works">
-				<PostList contents={ contents } />
+				{/* @ts-ignore */}
+				<PostList />
 			</div>
 		</main>
 	)
