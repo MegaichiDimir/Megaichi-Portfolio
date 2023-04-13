@@ -19,6 +19,7 @@ const PostList = async () => {
 								<div key={post.id} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 rounded-xl transition-colors">
 									<Link
 										href={`/works/${post.slug}`} 
+										scroll={false}
 										className="w-full sm:h-40 min-h-0 flex flex-col sm:flex-row gap-1 sm:gap-4 items-center p-4"
 									>
 										<Image
