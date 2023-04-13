@@ -11,9 +11,9 @@ const Header: React.FC = () => {
 					<h1 className="mr-10 text-slate-500"><Link href="/">Megaichi&#39;s site</Link></h1>
 					<div className="flex flex-row items-center justify-between">
 						<div className="flex flex-row items-center gap-5 text-xl text-slate-400">
-							<a href="https://twitter.com/Megaichi_Kenty" className="hover:text-slate-600 transition-colors"><SiTwitter /></a>
-							<a href="https://github.com/MegaichiDimir" className="hover:text-slate-600 transition-colors"><SiGithub /></a>
-							<a href="https://zenn.dev/megaichi" className="hover:text-slate-600 transition-colors"><SiZenn /></a>
+							<a href="https://twitter.com/Megaichi_Kenty" target="_blank" className="hover:text-slate-600 transition-colors"><SiTwitter /></a>
+							<a href="https://github.com/MegaichiDimir" target="_blank" className="hover:text-slate-600 transition-colors"><SiGithub /></a>
+							<a href="https://zenn.dev/megaichi" target="_blank" className="hover:text-slate-600 transition-colors"><SiZenn /></a>
 						</div>
 					</div>
 				</div>

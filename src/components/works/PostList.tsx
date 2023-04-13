@@ -13,12 +13,12 @@ const PostList = async () => {
 			<div className="bg-sky-100">
 				<div className="container mx-auto py-12 text-slate-800">
 					<h2 className="mx-auto pb-12 text-center text-5xl font-extralight">Works</h2>
-					<div className="grid grid-cols-2  gap-4 mx-1">
+					<div className="grid grid-cols-2 gap-4 mx-1">
 						{contents.map((post) => {
 							return (
 								<div key={post.id} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 rounded-xl transition-colors">
 									<Link
-										href={`works/${post.slug}`} 
+										href={`/works/${post.slug}`} 
 										className="w-full sm:h-40 min-h-0 flex flex-col sm:flex-row gap-1 sm:gap-4 items-center p-4"
 									>
 										<Image

@@ -1,9 +1,8 @@
 import React from 'react'
-import { roboto, noto_sans_jp } from './fonts'
 import '@/app/globals.css'
 import Header from '@/components/Header'
 import ScrollToTop from '@/components/ScrollToTop'
-
+import { roboto, noto_sans_jp } from '@/libs/fonts'
 
 export const metadata = {
   title: {
