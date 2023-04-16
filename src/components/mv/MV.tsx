@@ -8,7 +8,7 @@ const MV = () => {
 		<>
 			<link rel="stylesheet" href="https://use.typekit.net/qhk1mtd.css"/>
 			<div className="flex flex-col justify-center items-center content-center w-full h-full font-['DIN-2014']">
-				<div className="flex flex-row mt-14">
+				<div className="flex flex-row ">
 					<div className="text-slate-500 text-6xl font-extrabold">  {/* header height 54px */}
 						{/* Megaichi&apos;s site */}
 						<p>hello</p>

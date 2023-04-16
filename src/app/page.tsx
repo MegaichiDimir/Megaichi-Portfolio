@@ -12,7 +12,7 @@ export default function Home () {
 			<KeepPosition />
 			<main>
 				{/* mv */}
-				<div className="relative bottom-14 inline-block w-full h-screen bg-teal-50">
+				<div className="relative inline-block w-full h-screen bg-teal-50">
 					<MV />
 				</div>
 			

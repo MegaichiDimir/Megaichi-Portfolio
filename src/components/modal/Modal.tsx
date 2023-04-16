@@ -1,5 +1,5 @@
 "use client";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useState, useCallback, useRef, useEffect } from "react";
 
 import { MdArrowBackIosNew } from 'react-icons/md'

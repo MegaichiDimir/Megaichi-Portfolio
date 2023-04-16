@@ -20,7 +20,7 @@ const Post = (
 				<div className="text-xl">{post.description}</div>
 			</div>
 			{post.links
-				?	<div className="flex flex-row gap-6">
+				?	<div className="flex flex-row flex-wrap gap-6">
 						<div>
 							{post.links.url
 								? 	<a href={post.links.url} target="_blank" className="flex flex-row items-center gap-1 underline hover:text-sky-600">

@@ -7,7 +7,7 @@ const Header = () => {
 	// height 56px (margin is not included)npm
 	return (
 		<header id='header'>
-			<div className="relative z-10 bg-white px-2 py-4 w-full lg:mb-4 drop-shadow-md text-slate-800">
+			<div className="fixed z-10 bg-white px-2 py-4 w-full lg:mb-4 drop-shadow-md text-slate-800">
 				<div className="container flex flex-row items-center justify-between mx-auto">
 					<h1 className="mr-10 text-slate-500"><Link href="/">Megaichi&#39;s site</Link></h1>
 					<div className="flex flex-row items-center justify-between">
