@@ -1,7 +1,9 @@
 import React from 'react'
+
 import '@/app/globals.css'
-import Header from '@/components/Header'
 import ScrollToTop from '@/components/ScrollToTop'
+import { IntersectionProvider } from '@/components/context/IntersectionProvider'
+import Header from '@/components/header/Header'
 import { roboto, noto_sans_jp } from '@/libs/fonts'
 
 export const metadata = {
@@ -18,10 +20,12 @@ export default function Layout(
   return (
     <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable}`}>
       <body>
-        <Header/>
-        {props.children}
-        {props.modal}
-        <ScrollToTop/>
+        <IntersectionProvider>
+          <Header/>
+          {props.children}
+          {props.modal}
+          <ScrollToTop/>
+        </IntersectionProvider>
       </body>
     </html>
   )
