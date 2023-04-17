@@ -1,11 +1,14 @@
 'use client'
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext, useEffect, useMemo } from 'react';
 import { Link as Scroll } from 'react-scroll';
 
+import { IntersectionContext } from './IntersectionProvider';
 import { useGetElementProperty } from './hooks/useGetElementProperty';
 
 const HeaderNav = () => {
-	const [focus, setFocus] = useState({});
+	const [focusClass, setFocusClass] = useState<string>('');
+
+	const context = useContext(IntersectionContext);
 
 	const aboutMeRef = useRef<HTMLDivElement>(null);
 	const skillsRef = useRef<HTMLDivElement>(null);
@@ -17,8 +20,12 @@ const HeaderNav = () => {
 	const worksProps = useGetElementProperty<HTMLDivElement>(worksRef);
 	const contactProps = useGetElementProperty<HTMLDivElement>(contactRef);
 
-	// スクロール位置をトリガーにした処理
-	
+	useEffect(() => {
+		const intersection = context.intersection;
+		if (intersection === 'about-me') {
+			setFocusClass('text-slate-500');
+		}
+	}, [context.intersection]);
 
 	return (
 		<>
@@ -29,6 +36,8 @@ const HeaderNav = () => {
 						<div ref={skillsRef} className='hover:cursor-pointer'><Scroll to='skills' smooth={true} duration={600} offset={-56}>Skills</Scroll></div>
 						<div ref={worksRef} className='hover:cursor-pointer'><Scroll to='works' smooth={true} duration={600} offset={-56}>Works</Scroll></div>
 						<div ref={contactRef} className='hover:cursor-pointer'><Scroll to='contact' smooth={true} duration={600} offset={-56}>Works</Scroll></div>
+					</div>
+					<div className={focusClass}>
 					</div>
 				</div>
 			</div>
