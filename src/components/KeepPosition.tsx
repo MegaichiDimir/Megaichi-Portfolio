@@ -5,6 +5,7 @@ import { scroller } from 'react-scroll';
 
 // モーダル展開時にスクロール位置を保持する
 // Next.js 13.3 から scrollRestoration が効かないため応急処置
+// 追記: 13.3.1-canary.7 で修正されたため無効化
 const KeepPosition = () => {
 	const pathname = usePathname()
 

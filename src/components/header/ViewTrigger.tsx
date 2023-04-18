@@ -9,7 +9,7 @@ const ViewTrigger = ({ children, sectionName }: { children: React.ReactNode, sec
 
 
 	const { ref } = useInView({
-		threshold: 0.7,
+		threshold: 0.5,
 		onChange: (inView) => {
 			if (inView) {
 				setIntersection(sectionName)

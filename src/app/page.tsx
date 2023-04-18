@@ -1,4 +1,3 @@
-import KeepPosition from '@/components/KeepPosition';
 import AboutMe from '@/components/aboutMe/AboutMe';
 import Contact from '@/components/contact/Contact';
 import ViewTrigger from '@/components/header/ViewTrigger';
@@ -10,12 +9,13 @@ import PostList from '@/components/works/PostList';
 export default function Home () {
 	return (
 		<>
-			<KeepPosition />
 			<main>
 				{/* mv */}
-				<div className="relative inline-block w-full h-screen bg-teal-50">
-					<MV />
-				</div>
+				<ViewTrigger sectionName='mv'>
+					<div className="relative inline-block w-full h-screen bg-teal-50">
+						<MV />
+					</div>
+				</ViewTrigger>
 			
 				{/* About Me */}
 				<ViewTrigger sectionName='about-me'>
