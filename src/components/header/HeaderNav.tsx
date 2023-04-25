@@ -75,7 +75,7 @@ const HeaderNav = () => {
 		<>
 			<div className="flex">
 				<div>
-					<div id='focus' className="fixed top-0 left-0 z-20 p-2 rounded bg-slate-100" style={focusStyle}></div>
+					<div id='focus' className="fixed top-0 left-0 z-20 rounded bg-slate-700/10" style={focusStyle}></div>
 					<div className="relative flex flex-row items-center justify-center gap-8 z-30 text-slate-600">
 						<div ref={aboutMeRef} className='px-2 rounded hover:cursor-pointer'><Scroll to='about-me' smooth={true} duration={600} offset={-56}>About Me</Scroll></div>
 						<div ref={skillsRef} className='px-2 rounded hover:cursor-pointer'><Scroll to='skills' smooth={true} duration={600} offset={-56}>Skills</Scroll></div>
