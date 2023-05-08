@@ -1,4 +1,5 @@
 import AboutMe from '@/components/aboutMe/AboutMe';
+import Blog from '@/components/blog/Blog';
 import Contact from '@/components/contact/Contact';
 import ViewTrigger from '@/components/header/ViewTrigger';
 import MV from '@/components/mv/MV';
@@ -44,6 +45,14 @@ export default function Home () {
 					<div id="works">
 						{/* @ts-ignore */}
 						<PostList />
+					</div>
+				</ViewTrigger>
+
+				{/* blog */}
+				<ViewTrigger sectionName='works'>
+					<div id="blog">
+						{/* @ts-ignore */}
+						<Blog />
 					</div>
 				</ViewTrigger>
 
