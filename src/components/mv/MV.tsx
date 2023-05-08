@@ -1,6 +1,4 @@
-'use client'
-import { Link as Scroll } from 'react-scroll';
-
+import BlobLink from './BlobLink';
 import ScrollToNext from "./ScrollToNext"
 
 const MV = () => {
@@ -11,13 +9,32 @@ const MV = () => {
 				<div className="flex flex-row ">
 					<div className="text-slate-500 text-6xl font-extrabold">  {/* header height 54px */}
 						{/* Megaichi&apos;s site */}
-						<p>hello</p>
-						<p className="text-sm"></p>
 					</div>
-					<div className="flex flex-col gap-5 font-2xl">
-						<Scroll to='about-me' smooth={true} duration={600}>About Me</Scroll>
-						<Scroll to='skills' smooth={true} duration={700}>Skills</Scroll>
-						<Scroll to='works' smooth={true} duration={800}>Works</Scroll>
+					<div className="flex flex-row gap-5 font-sans">
+						<BlobLink
+							title="自分について"
+							to="about-me"
+							frontColor="#FFFFFF"
+							backColor="#CBD5E1"
+						/>
+						<BlobLink
+							title="出来ること"
+							to="skills"
+							frontColor="#F7FEE7"
+							backColor="#BEF264"
+						/>
+						<BlobLink
+							title="作ったもの"
+							to="works"
+							frontColor="#F0F9FF"
+							backColor="#7DD3FC"
+						/>
+						<BlobLink
+							title="投稿記事"
+							to="blog"
+							frontColor="#FEFCE8"
+							backColor="#FDE047"
+						/>
 					</div>
 				</div>
 				<ScrollToNext />
