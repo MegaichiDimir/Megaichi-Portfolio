@@ -21,7 +21,7 @@ export default function Home () {
 				{/* About Me */}
 				<ViewTrigger sectionName='about-me'>
 					<div id="about-me">
-						{/* @ts-ignore */}
+						{/* @ts-expect-error Async Server Component */}
 						<AboutMe />
 					</div>
 				</ViewTrigger>
@@ -33,7 +33,7 @@ export default function Home () {
 						<div className="container mx-auto py-12 text-slate-800 ">
 							<h2 className="mx-auto pb-12 text-center text-5xl font-extralight">Skills</h2>
 							<div className="grid grid-cols-3 sm:grid-cols-4 gap-4 mx-1">
-								{/* @ts-ignore */}
+								{/* @ts-expect-error Async Server Component */}
 								<SkillList />
 							</div>
 							</div>
@@ -43,7 +43,7 @@ export default function Home () {
 				{/* works */}
 				<ViewTrigger sectionName='works'>
 					<div id="works">
-						{/* @ts-ignore */}
+						{/* @ts-expect-error Async Server Component */}
 						<PostList />
 					</div>
 				</ViewTrigger>
@@ -51,7 +51,7 @@ export default function Home () {
 				{/* blog */}
 				<ViewTrigger sectionName='works'>
 					<div id="blog">
-						{/* @ts-ignore */}
+						{/* @ts-expect-error Async Server Component */}
 						<Blog />
 					</div>
 				</ViewTrigger>

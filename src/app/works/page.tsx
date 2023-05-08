@@ -12,7 +12,7 @@ export default function StaticPage() {
         <>
             <div className="relative bottom-14 min-h-screen bg-sky-100">
                 <div className="pt-12">
-                    {/* @ts-ignore */}
+                    {/* @ts-expect-error Async Server Component */}
                     <PostList />
                 </div>
             </div>
