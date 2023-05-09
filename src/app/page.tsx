@@ -49,7 +49,7 @@ export default function Home () {
 				</ViewTrigger>
 
 				{/* blog */}
-				<ViewTrigger sectionName='works'>
+				<ViewTrigger sectionName='blog'>
 					<div id="blog">
 						{/* @ts-expect-error Async Server Component */}
 						<Blog />
