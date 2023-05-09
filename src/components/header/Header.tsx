@@ -7,9 +7,9 @@ const Header = () => {
 	// height 56px (margin is not included)npm
 	return (
 		<header id='header'>
-			<div className="fixed z-10 px-2 py-4 w-full lg:mb-4 drop-shadow-md text-slate-800 backdrop-blur-md bg-white/30 border border-b-white/40">
+			<div className="fixed z-50 px-2 py-4 w-full lg:mb-4 drop-shadow-md text-slate-800 backdrop-blur-md bg-white/90">
 				<div className="container flex flex-row items-center justify-between mx-auto">
-					<h1 className="mr-10 text-slate-500"><Link href="/">Megaichi&#39;s site</Link></h1>
+					<h1 className="mr-10"><Link href="/">Megaichi&#39;s site</Link></h1>
 					<div className="flex flex-row items-center justify-between">
 						<HeaderNav />
 						{/* <div className="flex flex-row items-center gap-5 text-xl text-slate-400">
