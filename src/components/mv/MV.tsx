@@ -37,7 +37,7 @@ const MV = () => {
 						/>
 					</div>
 				</div>
-				<ScrollToNext />
+				{/* <ScrollToNext /> */}
 			</div>
 		</>
 	)
