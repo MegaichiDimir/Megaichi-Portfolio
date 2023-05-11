@@ -44,7 +44,7 @@ const Modal = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<div
 			ref={overlay}
-			className={`fixed z-60 inset-0 backdrop-blur transition ${rendered === true ? "opacity-100" : "opacity-0"}`}
+			className={`fixed z-[60] inset-0 backdrop-blur transition ${rendered === true ? "opacity-100" : "opacity-0"}`}
 			onClick={onClick}
 		>
 			

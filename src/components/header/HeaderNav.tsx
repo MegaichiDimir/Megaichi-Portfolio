@@ -1,6 +1,8 @@
 'use client'
 import { useState, useRef, useContext, useEffect } from 'react';
+import { MdMenu, MdClose } from 'react-icons/md';
 import { Link as Scroll } from 'react-scroll';
+import { useMedia } from 'react-use';
 
 import { IntersectionContext } from '../context/IntersectionProvider';
 import { useGetElementProperty } from '../hooks/useGetElementProperty';
@@ -22,7 +24,6 @@ const HeaderNav = () => {
 		width: 0,
 		height: aboutMeProps('height'),
 		translate: `${aboutMeProps('left')}px ${aboutMeProps('top')}px`,
-		transition: 'all 0.15s ease-in-out',
 		opacity: 0, 
 		backgroundColor: 'rgb(226, 232, 240)',
 	}
@@ -35,7 +36,6 @@ const HeaderNav = () => {
 				width: 0,
 				height: aboutMeProps('height'),
 				translate: `${aboutMeProps('left')}px ${aboutMeProps('top')}px`,
-				transition: 'all 0.15s ease-in-out',
 				opacity: 0, 
 				backgroundColor: 'rgb(226, 232, 240)',
 			})
@@ -44,7 +44,6 @@ const HeaderNav = () => {
 				width: aboutMeProps('width'),
 				height: aboutMeProps('height'),
 				translate: `${aboutMeProps('left')}px ${aboutMeProps('top')}px`,
-				transition: 'all 0.15s ease-in-out',
 				backgroundColor: 'rgb(226, 232, 240)',
 			}
 			setFocusStyle(style)
@@ -53,7 +52,6 @@ const HeaderNav = () => {
 				width: skillsProps('width'),
 				height: skillsProps('height'),
 				translate: `${skillsProps('left')}px ${skillsProps('top')}px`,
-				transition: 'all 0.15s ease-in-out',
 				backgroundColor: 'rgb(236, 252, 203)',
 			}
 			setFocusStyle(style)
@@ -62,7 +60,6 @@ const HeaderNav = () => {
 				width: worksProps('width'),
 				height: worksProps('height'),
 				translate: `${worksProps('left')}px ${worksProps('top')}px`,
-				transition: 'all 0.15s ease-in-out',
 				backgroundColor: 'rgb(224, 242, 254)',
 			}
 			setFocusStyle(style)
@@ -71,7 +68,6 @@ const HeaderNav = () => {
 				width: blogProps('width'),
 				height: blogProps('height'),
 				translate: `${blogProps('left')}px ${blogProps('top')}px`,
-				transition: 'all 0.15s ease-in-out',
 				backgroundColor: 'rgb(254, 249, 195)',
 			}
 			setFocusStyle(style)
@@ -80,7 +76,6 @@ const HeaderNav = () => {
 				width: contactProps('width'),
 				height: contactProps('height'),
 				translate: `${contactProps('left')}px ${contactProps('top')}px`,
-				transition: 'all 0.15s ease-in-out',
 				backgroundColor: 'rgb(226, 232, 240)',
 			}
 			setFocusStyle(style)
@@ -88,20 +83,21 @@ const HeaderNav = () => {
 
 	}, [intersection, aboutMeProps, contactProps, skillsProps, worksProps, blogProps])
 
+	const [isOpen, setIsOpen] = useState(false);
+	const isWide = useMedia('(min-width: 768px)', true);
 
 	return (
 		<>
-			<div className="flex">
-				<div>
-					<div id='focus' className="fixed top-0 left-0 z-60 rounded" style={focusStyle}></div>
-					<div className="relative flex flex-row items-center justify-center gap-8 z-70 text-slate-800">
-						<div ref={aboutMeRef} className='px-2 rounded hover:cursor-pointer'><Scroll to='about-me' smooth={true} duration={600} offset={-56}>About Me</Scroll></div>
-						<div ref={skillsRef} className='px-2 rounded hover:cursor-pointer'><Scroll to='skills' smooth={true} duration={600} offset={-56}>Skills</Scroll></div>
-						<div ref={worksRef} className='px-2 rounded hover:cursor-pointer'><Scroll to='works' smooth={true} duration={600} offset={-56}>Works</Scroll></div>
-						<div ref={blogRef} className='px-2 rounded hover:cursor-pointer'><Scroll to='blog' smooth={true} duration={600} offset={-56}>Blog</Scroll></div>
-						<div ref={contactRef} className='px-2 rounded hover:cursor-pointer'><Scroll to='contact' smooth={true} duration={600} offset={-56}>Contact</Scroll></div>
-					</div>
-				</div>
+			<button className='md:hidden z-[80] text-2xl' onClick={() => {isOpen ? setIsOpen(false) : setIsOpen(true)}}>{isOpen ? <MdClose /> : <MdMenu />}</button>
+			<div className={`fixed md:static top-0 right-0 pt-14 md:pt-0 w-60 md:w-auto h-screen md:h-auto transition-transform bg-white ${isWide? "hidden md:block" : `block ${isOpen ? "translate-x-0" : "translate-x-[16rem]"}`}`}>
+				<div id='focus' className="fixed top-0 left-[-10rem] md:left-0 z-[60] rounded transition-all" style={focusStyle}></div>
+				<nav className="relative z-[70] flex flex-col md:flex-row items-center justify-center gap-8 text-slate-800">
+					<div ref={aboutMeRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='about-me' smooth={true} duration={600} offset={-56}>About Me</Scroll></div>
+					<div ref={skillsRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='skills' smooth={true} duration={600} offset={-56}>Skills</Scroll></div>
+					<div ref={worksRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='works' smooth={true} duration={600} offset={-56}>Works</Scroll></div>
+					<div ref={blogRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='blog' smooth={true} duration={600} offset={-56}>Blog</Scroll></div>
+					<div ref={contactRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='contact' smooth={true} duration={600} offset={-56}>Contact</Scroll></div>
+				</nav>
 			</div>
 		</>	
 	)
