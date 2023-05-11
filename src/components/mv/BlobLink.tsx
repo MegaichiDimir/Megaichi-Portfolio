@@ -3,7 +3,7 @@ import { Link as Scroll } from 'react-scroll';
 
 import Blob from './Blob'
 
-const BlobLink = ({ title, to, frontColor, backColor }: { title: string, to: string, frontColor: string, backColor:string }) => {
+const BlobLink = ({ children, to, frontColor, backColor }: { children: React.ReactNode, to: string, frontColor: string, backColor:string }) => {
 
 	return (
 		<>
@@ -15,7 +15,9 @@ const BlobLink = ({ title, to, frontColor, backColor }: { title: string, to: str
 					<div className="frontBlob">
 						<Blob color={frontColor} />
 					</div>
-					<h3 className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] m-0 p-0">{title}</h3>
+					<div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] m-0 p-0">
+						{children}
+					</div>
 				</div>
 			</Scroll>
 		</>
