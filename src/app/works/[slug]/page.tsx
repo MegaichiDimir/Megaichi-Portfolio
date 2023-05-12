@@ -52,7 +52,7 @@ export default async function StaticDetailPage(
 
 	return (
 		<>
-			<div className="container mx-auto mt-6">
+			<div className="container mx-auto mt-20">
 				{/* パンくずリスト */}
 				<ul className="mb-6 whitespace-nowrap text-sm text-slate-500">
 					<li className="inline"><Link href={`/`} className="hover:text-slate-800 hover:underline">Home</Link><span> / </span></li>

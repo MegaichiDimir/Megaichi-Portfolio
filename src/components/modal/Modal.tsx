@@ -58,7 +58,7 @@ const Modal = ({ children }: { children: React.ReactNode }) => {
 			>
 				<div className="flex flex-col min-h-0 max-h-full h-full">
 					<div className="min-h-0 overflow-x-hidden">
-						<div className="px-8">
+						<div className="px-8 pb-8">
 							{children}
 						</div>
 					</div>

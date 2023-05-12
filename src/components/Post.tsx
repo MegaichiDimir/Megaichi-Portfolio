@@ -15,12 +15,12 @@ const Post = (
 	
 	return (
 		<>
-			<div className="flex flex-col md:flex-row md:items-end gap-4 mb-2">
-			<h2 className="text-5xl font-bold">{post.title}</h2>
-				<div className="text-xl">{post.description}</div>
+			<div className="flex flex-col md:flex-row md:items-end gap-2 mb-2">
+			<h2 className="text-3xl md:text-4xl font-bold">{post.title}</h2>
+				<div className="text-lg text-slate-600">{post.description}</div>
 			</div>
 			{post.links
-				?	<div className="flex flex-row flex-wrap gap-6">
+				?	<div className="flex flex-row flex-wrap gap-2 md:gap-6 text-slate-700">
 						<div>
 							{post.links.url
 								? 	<a href={post.links.url} target="_blank" className="flex flex-row items-center gap-1 underline hover:text-sky-600">

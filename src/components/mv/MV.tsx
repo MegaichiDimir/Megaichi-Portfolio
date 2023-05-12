@@ -11,7 +11,7 @@ const MV = () => {
 				<div className="flex flex-col justify-around items-center pt-14 md:py-14 w-full max-h-[700px] h-full">
 					<div className="flex-1 flex flex-col justify-center items-center gap-4 text-slate-500 font-['DIN-2014']">  {/* header height 54px */}
 						<Title />
-						<p className="text-sm xs:text-base font-light">Web Frontend & Design & Competitive Gamer</p>
+						<p className="text-sm xs:text-base md:text-xl font-light">Web Frontend & Design & Competitive Gamer</p>
 					</div>
 					<div className="grid grid-cols-2 md:grid-cols-[repeat(4,minmax(0,calc((100vw_/_4)_-_4rem)))] grid-rows-[repeat(2,minmax(0,calc((100vw_/_2)_-_2rem)))] md:grid-rows-1 content-evenly justify-evenly items-center justify-items-center md:gap-5aspect-square xs:aspect-auto w-full md:min-h-[240px] font-sans">
 						<div className="scale-[.68] xs:scale-90 sm:scale-100">
