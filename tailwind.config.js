@@ -6,9 +6,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '414px',
+      ...defaultTheme.screens,
+    },
     extend: {
       fontFamily: {
         sans: ['var(--font-roboto)','var(--font-noto-sans-jp)' , ...defaultTheme.fontFamily.sans],
+        rounded: ['var(--font-m-plus-rounded-1c)','var(--font-roboto)','var(--font-noto-sans-jp)', ...defaultTheme.fontFamily.sans],
       }
     },
   },

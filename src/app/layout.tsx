@@ -4,7 +4,7 @@ import '@/app/globals.css'
 import ScrollToTop from '@/components/ScrollToTop'
 import { IntersectionProvider } from '@/components/context/IntersectionProvider'
 import Header from '@/components/header/Header'
-import { roboto, noto_sans_jp } from '@/libs/fonts'
+import { roboto, noto_sans_jp, m_plus_rounded_1c } from '@/libs/fonts'
 
 export const metadata = {
   title: {
@@ -18,7 +18,7 @@ export default function Layout(
   props: { children: React.ReactNode, modal: React.ReactNode }
   ) {
   return (
-    <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable}`}>
+    <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable} ${m_plus_rounded_1c.variable}`}>
       <body>
         <IntersectionProvider>
           <Header/>
