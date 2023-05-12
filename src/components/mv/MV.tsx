@@ -13,7 +13,7 @@ const MV = () => {
 						<Title />
 						<p className="text-sm xs:text-base font-light">Web Frontend & Design & Competitive Gamer</p>
 					</div>
-					<div className="grid grid-cols-2 md:grid-cols-[repeat(4,minmax(0,calc((100vw_/_4)_-_4rem)))] grid-rows-[repeat(2,minmax(0,calc((100vw_/_3)_-_2rem)))] md:grid-rows-1 content-evenly justify-evenly items-center justify-items-center md:gap-5 aspect-square xs:aspect-auto w-full md:min-h-[240px] font-rounded">
+					<div className="grid grid-cols-2 md:grid-cols-[repeat(4,minmax(0,calc((100vw_/_4)_-_4rem)))] grid-rows-[repeat(2,minmax(0,calc((100vw_/_3)_-_2rem)))] md:grid-rows-1 content-evenly justify-evenly items-center justify-items-center md:gap-5aspect-square xs:aspect-auto w-full md:min-h-[240px] font-sans">
 						<div className="scale-[.68] xs:scale-90 sm:scale-100">
 							<BlobLink
 								to="about-me"
