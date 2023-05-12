@@ -23,7 +23,7 @@ const Blog = async () => {
 			<div className="bg-yellow-100">
 				<div className="container mx-auto py-12">
 					<h2 className="mx-auto pb-12 text-center text-5xl font-extralight">Blog</h2>
-					<div className="grid grid-cols-2 gap-4 mx-1">
+					<div className="grid grid-cols-1 gap-4 mx-1">
 						{zennArticles.map((article) => {
 							return (
 								<div key={article.keyDate} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 rounded-xl transition-colors">
