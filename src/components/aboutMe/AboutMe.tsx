@@ -27,7 +27,7 @@ const AboutMe = async () => {
 							) : ""}
 							{image && caption ? (
 								<div className="mb-6 text-center text-xs text-slate-500">
-									<p>{caption} {captionLinkName && captionLinkUrl ? <a href={captionLinkUrl} target="_blank" className="hover:underline">{captionLinkName}</a> : ""}</p>
+									<p>{caption} {captionLinkName && captionLinkUrl ? <a href={captionLinkUrl} target="_blank" rel="noreferrer" className="hover:underline">{captionLinkName}</a> : ""}</p>
 								</div>
 							) : ""}
 						</div>

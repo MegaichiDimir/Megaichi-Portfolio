@@ -23,21 +23,21 @@ const Post = (
 				?	<div className="flex flex-row flex-wrap gap-2 md:gap-6 text-slate-700">
 						<div>
 							{post.links.url
-								? 	<a href={post.links.url} target="_blank" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
+								? 	<a href={post.links.url} target="_blank" rel="noreferrer" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
 										Product Page
 									</a> 
 								: 	""}
 						</div>
 						<div>
 							{post.links.github
-								? 	<a href={post.links.github} target="_blank" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
+								? 	<a href={post.links.github} target="_blank" rel="noreferrer" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
 										<FaGithub className="text-slate-800"/>GitHub
 									</a> 
 								: 	""}
 						</div>
 						<div>
 							{post.links.preview
-								?   <a href={post.links.preview} target="_blank" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
+								?   <a href={post.links.preview} target="_blank" rel="noreferrer" className="flex flex-row items-center gap-1 underline hover:text-sky-600">
 										{post.links.preview_desc}
 									</a> 
 								: 	""}
