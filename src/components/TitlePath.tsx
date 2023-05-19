@@ -1,10 +1,8 @@
-const Title = ({ className }: { className?: string }) => {
+// logo path for the title
+// Can be displayed in Logo.tsx
+const TitlePath = () => {
 	return (
 		<>
-			<div 
-				className="w-64 xs:w-80 md:w-96 h-16 xs:h-20 md:h-24 bg-gradient-to-r from-blue-500 to-violet-500"
-				style={{clipPath: 'url(#megaichiPath)'}}
-			></div>
 			<svg viewBox="0 0 100 25" className="absolute w-0 h-0 -z-10">
 				<defs>
 					<clipPath 
@@ -22,4 +20,4 @@ const Title = ({ className }: { className?: string }) => {
 	)
 }
 
-export default Title;
+export default TitlePath;

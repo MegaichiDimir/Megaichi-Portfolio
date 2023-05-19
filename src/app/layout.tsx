@@ -2,6 +2,7 @@ import React from 'react'
 
 import '@/app/globals.css'
 import ScrollToTop from '@/components/ScrollToTop'
+import TitlePath from '@/components/TitlePath'
 import { IntersectionProvider } from '@/components/context/IntersectionProvider'
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
@@ -21,6 +22,7 @@ export default function Layout(
   return (
     <html lang="ja" className={`${roboto.variable} ${noto_sans_jp.variable} ${barlow_semi_condensed.variable}`}>
       <body>
+        <TitlePath />
         <IntersectionProvider>
           <Header/>
           {props.children}
