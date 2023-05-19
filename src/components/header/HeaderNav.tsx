@@ -12,13 +12,11 @@ const HeaderNav = () => {
 	const skillsRef = useRef<HTMLDivElement>(null);
 	const worksRef = useRef<HTMLDivElement>(null);
 	const blogRef = useRef<HTMLDivElement>(null);
-	const contactRef = useRef<HTMLDivElement>(null);
 
 	const aboutMeProps = useGetElementProperty<HTMLDivElement>(aboutMeRef).getElementProperty;
 	const skillsProps = useGetElementProperty<HTMLDivElement>(skillsRef).getElementProperty;
 	const worksProps = useGetElementProperty<HTMLDivElement>(worksRef).getElementProperty;
 	const blogProps = useGetElementProperty<HTMLDivElement>(blogRef).getElementProperty;
-	const contactProps = useGetElementProperty<HTMLDivElement>(contactRef).getElementProperty;
 
 	const defaultStyle = {
 		width: 0,
@@ -71,17 +69,9 @@ const HeaderNav = () => {
 				backgroundColor: 'rgb(254, 249, 195)',
 			}
 			setFocusStyle(style)
-		} else if (intersection === 'contact') {
-			const style = {
-				width: contactProps('width'),
-				height: contactProps('height'),
-				translate: `${contactProps('left')}px ${contactProps('top')}px`,
-				backgroundColor: 'rgb(226, 232, 240)',
-			}
-			setFocusStyle(style)
 		}
 
-	}, [intersection, aboutMeProps, contactProps, skillsProps, worksProps, blogProps])
+	}, [intersection, aboutMeProps, skillsProps, worksProps, blogProps])
 
 	const [isOpen, setIsOpen] = useState(false);
 	const isWide = useMedia('(min-width: 768px)', true);
@@ -96,7 +86,6 @@ const HeaderNav = () => {
 					<div ref={skillsRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='skills' smooth={true} duration={600} offset={-56}>Skills</Scroll></div>
 					<div ref={worksRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='works' smooth={true} duration={600} offset={-56}>Works</Scroll></div>
 					<div ref={blogRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='blog' smooth={true} duration={600} offset={-56}>Blog</Scroll></div>
-					<div ref={contactRef} className='px-2 rounded hover:cursor-pointer min-w-[10rem] md:min-w-0 md:w-auto'><Scroll to='contact' smooth={true} duration={600} offset={-56}>Contact</Scroll></div>
 				</nav>
 			</div>
 		</>	

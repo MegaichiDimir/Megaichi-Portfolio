@@ -1,6 +1,5 @@
 import AboutMe from '@/components/aboutMe/AboutMe';
 import Blog from '@/components/blog/Blog';
-import Contact from '@/components/contact/Contact';
 import ViewTrigger from '@/components/header/ViewTrigger';
 import MV from '@/components/mv/MV';
 import SkillList from '@/components/skills/SkillList';
@@ -52,11 +51,6 @@ export default function Home () {
 						{/* @ts-expect-error Async Server Component */}
 						<Blog />
 					</div>
-				</ViewTrigger>
-
-				{/* contact */}
-				<ViewTrigger sectionName='contact'>
-					<Contact />
 				</ViewTrigger>
 			</main>
 		</>
