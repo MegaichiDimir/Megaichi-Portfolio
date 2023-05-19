@@ -32,11 +32,9 @@ export default function Home () {
 					<div id='skills' className="bg-lime-100">
 						<div className="container mx-auto py-12 text-slate-800 ">
 							<h2 className="mx-auto pb-12 text-center text-4xl sm:text-5xl font-extralight">Skills</h2>
-							<div className="grid grid-cols-3 sm:grid-cols-4 gap-4 mx-1">
-								{/* @ts-expect-error Async Server Component */}
-								<SkillList />
-							</div>
-							</div>
+							{/* @ts-expect-error Async Server Component */}
+							<SkillList />
+						</div>
 					</div>
 				</ViewTrigger>
 			

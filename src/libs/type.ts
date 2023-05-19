@@ -1,26 +1,27 @@
 export type Profile = {
-	image: {
-		url: string,
-		height: number,
-		width: number,
+	imageData: {
+		image?: {
+			url: string,
+			height: number,
+			width: number,
+		},
+		caption?: string,
+		captionLinkName?: string,
+		captionLinkUrl?: string,
 	},
 	name: string,
 	contents: string,
+	skill: Skill
 }
 
 export type Skill = {
-	contents: [
-		{
-			id: string,
-			title: string,
-			image: {
-				url: string,
-				height: number,
-				width: number,
-			},
-			description: string
-		}
-	]
+	fieldId: string,
+	task: string,
+	good: string,
+	possible: string,
+	beginner: string,
+	tools1: string,
+	tools2: string,
 }
 
 export type Works = {
