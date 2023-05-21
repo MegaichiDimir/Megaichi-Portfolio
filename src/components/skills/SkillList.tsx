@@ -10,12 +10,12 @@ import { getData } from "@/libs/microcms";
 import type { Profile } from "@/libs/type";
 
 const SkillList = async () => {
-	const { skill }: Profile  = await getData({endpoint: 'profile'});
+	const { skill }: Profile  = await getData({endpoint: "profile"});
 
 	const replaceOptions: HTMLReactParserOptions = {
 		replace: (domNode) => {
 			const typedDomNode = domNode as Element
-			if (typedDomNode.name === 'h4') {
+			if (typedDomNode.name === "h4") {
 				return (
 					<>
 						<h4 className="mt-4 mb-1 font-medium">

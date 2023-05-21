@@ -5,7 +5,7 @@ import type { Works } from "@/libs/type";
 // Modal, 個別リンク共通のレイアウト
 const Post = (
 	props: {
-		post: Works['contents']['0'],
+		post: Works["contents"]["0"],
 		parseContents: string | JSX.Element | JSX.Element[],
 		parseSidebar: string | JSX.Element | JSX.Element[]
 	}) => {

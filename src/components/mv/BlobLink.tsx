@@ -1,7 +1,7 @@
-'use client'
-import { Link as Scroll } from 'react-scroll';
+"use client"
+import { Link as Scroll } from "react-scroll";
 
-import Blob from './Blob'
+import Blob from "./Blob"
 
 const BlobLink = ({ children, to, className, frontClass, backClass }: { children: React.ReactNode, to: string, className?: string, frontClass: string, backClass:string }) => {
 

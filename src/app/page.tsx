@@ -1,9 +1,9 @@
-import AboutMe from '@/components/aboutMe/AboutMe';
-import Blog from '@/components/blog/Blog';
-import ViewTrigger from '@/components/header/ViewTrigger';
-import MV from '@/components/mv/MV';
-import SkillList from '@/components/skills/SkillList';
-import PostList from '@/components/works/PostList';
+import AboutMe from "@/components/aboutMe/AboutMe";
+import Blog from "@/components/blog/Blog";
+import ViewTrigger from "@/components/header/ViewTrigger";
+import MV from "@/components/mv/MV";
+import SkillList from "@/components/skills/SkillList";
+import PostList from "@/components/works/PostList";
 
 
 export default function Home () {

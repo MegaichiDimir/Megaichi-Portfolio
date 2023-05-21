@@ -1,7 +1,7 @@
-import { MdPerson, MdCode, MdSource, MdArticle } from 'react-icons/md';
+import { MdPerson, MdCode, MdSource, MdArticle } from "react-icons/md";
 
-import Logo from '../Logo';
-import BlobLink from './BlobLink';
+import Logo from "../Logo";
+import BlobLink from "./BlobLink";
 
 const MV = () => {
 	return (

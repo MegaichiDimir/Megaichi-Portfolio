@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { SiTwitter, SiGithub, SiZenn } from 'react-icons/si';
+import Link from "next/link";
+import { SiTwitter, SiGithub, SiZenn } from "react-icons/si";
 
-import Logo from '../Logo';
+import Logo from "../Logo";
 
 const Footer = () => {
 	return(

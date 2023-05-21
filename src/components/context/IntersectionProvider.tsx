@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React, { useState, createContext } from "react";
 
 type IntersectionContextType = {
@@ -10,7 +10,7 @@ export const IntersectionContext = createContext({} as IntersectionContextType);
 
 export const IntersectionProvider = ({ children }: { children: React.ReactNode }) => {
 	// Global State
-	const [intersection, setIntersection] = useState<string>('test');
+	const [intersection, setIntersection] = useState<string>("test");
 
 	return (
 		<IntersectionContext.Provider value={{intersection, setIntersection}}>

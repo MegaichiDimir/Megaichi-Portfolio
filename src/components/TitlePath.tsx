@@ -7,7 +7,7 @@ const TitlePath = () => {
 				<defs>
 					<clipPath 
 						id="megaichiPath"
-						clipPathUnits={'objectBoundingBox'}
+						clipPathUnits={"objectBoundingBox"}
 					>
 						<path 
 							transform="scale(0.01, 0.04)"

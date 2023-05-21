@@ -31,7 +31,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 	const slug = params.slug;
 	const { contents }: Works = await getData({endpoint: "works", queries: `?filters=slug%5Bequals%5D${slug}`});
-	const post = contents['0'];
+	const post = contents["0"];
 
 	return {
 		title: post.title,
@@ -40,7 +40,7 @@ export async function generateMetadata(
 }
 
 export default async function InterceptedModal ({params: { slug: slug }} : Props) {
-	const { contents }: Works = await getData({endpoint: 'works'});
+	const { contents }: Works = await getData({endpoint: "works"});
 	const post = contents.find((post) => post.slug === slug);
 
 	if (!post) {

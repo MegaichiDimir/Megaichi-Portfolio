@@ -4,7 +4,7 @@ import { getData } from "@/libs/microcms";
 import type { Profile } from "@/libs/type";
 
 const AboutMe = async () => {
-	const { name, contents, imageData }: Profile = await getData({endpoint: 'profile' });
+	const { name, contents, imageData }: Profile = await getData({endpoint: "profile" });
 	const { image, caption, captionLinkName, captionLinkUrl } = imageData; 
 
 	return (

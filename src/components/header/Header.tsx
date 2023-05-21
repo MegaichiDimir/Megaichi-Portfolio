@@ -1,6 +1,6 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import HeaderNav from './HeaderNav';
+import HeaderNav from "./HeaderNav";
 
 
 const Header = () => {

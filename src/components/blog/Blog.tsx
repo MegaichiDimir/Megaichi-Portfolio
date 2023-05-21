@@ -11,10 +11,10 @@ const Blog = async () => {
 
 		return {
 			keyDate: date.getTime(),
-			dateString: date.toLocaleDateString('ja-JP'),
+			dateString: date.toLocaleDateString("ja-JP"),
 			title: article.title,
 			url: `${zennUrl}${article.path}`,
-			service: 'Zenn',
+			service: "Zenn",
 		}
 	})
 

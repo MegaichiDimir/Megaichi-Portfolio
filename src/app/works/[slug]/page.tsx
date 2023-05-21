@@ -32,7 +32,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 	const slug = params.slug;
 	const { contents }: Works = await getData({endpoint: "works", queries: `?filters=slug%5Bequals%5D${slug}`});
-	const post = contents['0'];
+	const post = contents["0"];
 
 	return {
 		title: post.title,
@@ -44,7 +44,7 @@ export async function generateMetadata(
 export default async function StaticDetailPage(
 	{ params: { slug } }: Props ) {
 	const { contents }: Works = await getData({endpoint: "works", queries: `?filters=slug%5Bequals%5D${slug}`});
-	const post = contents['0'];
+	const post = contents["0"];
 
 	if (!post) {
 		notFound();

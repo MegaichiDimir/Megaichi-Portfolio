@@ -5,7 +5,7 @@ const Logo = ({ className }: { className?: string }) => {
 	return (
 		<div 
 			className={className}
-			style={{clipPath: 'url(#megaichiPath)'}}
+			style={{clipPath: "url(#megaichiPath)"}}
 		></div>
 	)
 }

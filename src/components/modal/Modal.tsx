@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import React, { useState, useCallback, useRef, useEffect } from "react";
 
-import { MdArrowBackIosNew } from 'react-icons/md'
+import { MdArrowBackIosNew } from "react-icons/md"
 
 const Modal = ({ children }: { children: React.ReactNode }) => {
 	const [rendered, setRendered] = useState(false);

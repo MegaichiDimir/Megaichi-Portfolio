@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { getData } from '@/libs/microcms';
+import { getData } from "@/libs/microcms";
 import type { Works } from "@/libs/type";
 
 
 const PostList = async () => {
-	const { contents }: Works = await getData({endpoint: 'works'});
+	const { contents }: Works = await getData({endpoint: "works"});
 
 	return(
 		<>

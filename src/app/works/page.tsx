@@ -2,7 +2,7 @@ import PostList from "@/components/works/PostList";
 
 
 export const metadata = {
-    title: 'Works',
+    title: "Works",
 }
 
 // 記事一覧ページ

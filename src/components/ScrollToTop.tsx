@@ -1,7 +1,7 @@
-'use client';
+"use client";
 import { useState, useEffect } from "react";
 import { SlArrowUp } from "react-icons/sl";
-import { Link as Scroll } from 'react-scroll';
+import { Link as Scroll } from "react-scroll";
 
 const ScrollToTop: React.FC = () => {
 	const [isShow, setIsShow] = useState(false);
@@ -13,8 +13,8 @@ const ScrollToTop: React.FC = () => {
 	}
 
 	useEffect(() => {
-		window.addEventListener('scroll', toggleShow)
-		return () => window.removeEventListener('scroll', toggleShow)
+		window.addEventListener("scroll", toggleShow)
+		return () => window.removeEventListener("scroll", toggleShow)
 	}, [])
 
 	return (

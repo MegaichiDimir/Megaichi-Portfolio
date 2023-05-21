@@ -1,19 +1,19 @@
-import React from 'react'
+import React from "react"
 
-import '@/app/globals.css'
-import ScrollToTop from '@/components/ScrollToTop'
-import TitlePath from '@/components/TitlePath'
-import { IntersectionProvider } from '@/components/context/IntersectionProvider'
-import Footer from '@/components/footer/Footer'
-import Header from '@/components/header/Header'
-import { roboto, noto_sans_jp, barlow_semi_condensed } from '@/libs/fonts'
+import "@/app/globals.css"
+import ScrollToTop from "@/components/ScrollToTop"
+import TitlePath from "@/components/TitlePath"
+import { IntersectionProvider } from "@/components/context/IntersectionProvider"
+import Footer from "@/components/footer/Footer"
+import Header from "@/components/header/Header"
+import { roboto, noto_sans_jp, barlow_semi_condensed } from "@/libs/fonts"
 
 export const metadata = {
   title: {
-    default: 'Megaichi\'s Portfolio',
-    template: '%s | Megaichi\'s Portfolio',
+    default: "Megaichi's Portfolio",
+    template: "%s | Megaichi's Portfolio",
   },
-  description: 'メガいちのポートフォリオサイト。WEBフロントエンドを中心に、様々な分野を学習しています。',
+  description: "メガいちのポートフォリオサイト。WEBフロントエンドを中心に、様々な分野を学習しています。",
 }
 
 export default function Layout(
