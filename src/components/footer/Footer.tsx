@@ -5,7 +5,7 @@ const Footer = () => {
 		<>
 			<div id="footer" className="bg-white">
 				<div className="container mx-auto pt-16 pb-32 text-slate-800">
-					<h2 className="mx-auto pb-16 text-center text-4xl font-extralight">Contact</h2>
+					<h2 className="mx-auto pb-16 text-center text-4xl font-light">Contact</h2>
 					<div className="flex flex-col justify-center items-center gap-10 mx-4 text-2xl">
 						<p>Email: ichiki.kento@gmail.com</p>
 						<div className="flex flex-row items-center gap-8 text-4xl text-slate-400">

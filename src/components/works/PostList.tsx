@@ -12,7 +12,7 @@ const PostList = async () => {
 		<>
 			<div className="bg-sky-100">
 				<div className="container mx-auto py-12 text-slate-800">
-					<h2 className="mx-auto pb-12 text-center text-4xl sm:text-5xl font-extralight">Works</h2>
+					<h2 className="mx-auto pb-12 text-center text-4xl sm:text-5xl font-light">Works</h2>
 					<div className="grid grid-cols-2 gap-4 mx-1">
 						{contents.map((post) => {
 							return (

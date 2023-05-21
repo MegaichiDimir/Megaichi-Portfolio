@@ -11,11 +11,11 @@ const AboutMe = async () => {
 		<>
 			<div className="bg-white">
 				<div className="container max-w-screen-lg mx-auto pt-16 pb-32 text-slate-800">
-					<h2 className="mx-auto pb-16 text-center text-4xl sm:text-5xl font-extralight">About Me</h2>
+					<h2 className="mx-auto pb-16 text-center text-4xl sm:text-5xl font-light">About Me</h2>
 					<div className="flex flex-wrap justify-center gap-4 mx-4">
 						<div className="flex flex-col justify-center items-center">
 							{image ? (
-								<div className={`w-44 aspect-square bg-slate-200 drop-shadow mr-4 ${caption ? "mb-2" : "mb-6"}`}>
+								<div className={`w-44 aspect-square bg-slate-200 drop-shadow ${caption ? "mb-2" : "mb-6"}`}>
 									<Image
 										className="object-cover"
 										src={image.url}

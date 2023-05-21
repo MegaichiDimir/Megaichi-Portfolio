@@ -64,7 +64,7 @@ const SkillList = async () => {
 							<MdComputer className="text-4xl" />
 							<h3 className="text-2xl">使用ツール・サービス</h3>
 						</div>
-						<div className="flex flex-col sm:flex-row content-around sm:w-full">
+						<div className="flex flex-col sm:flex-row content-around justify-center sm:w-full">
 							<div className="sm:basis-1/2 lg:basis-1/4 sm:text-center">
 								<div className="inline-block text-left">{parse(skill.tools1, replaceOptions)}</div>
 							</div>
