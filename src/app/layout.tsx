@@ -13,7 +13,7 @@ export const metadata = {
     default: 'Megaichi\'s Portfolio',
     template: '%s | Megaichi\'s Portfolio',
   },
-  description: 'Megaichiのポートフォリオサイト。WEBフロントエンドを中心に、様々な分野を学習しています。',
+  description: 'メガいちのポートフォリオサイト。WEBフロントエンドを中心に、様々な分野を学習しています。',
 }
 
 export default function Layout(
