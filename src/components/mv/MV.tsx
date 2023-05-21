@@ -16,8 +16,9 @@ const MV = () => {
 						<div className="scale-[.68] xs:scale-90 sm:scale-100">
 							<BlobLink
 								to="about-me"
-								frontColor="#FFFFFF"
-								backColor="#CBD5E1"
+								className="cursor-pointer"
+								frontClass="fill-white hover:fill-slate-100"
+								backClass="fill-slate-300"
 							>
 								<div className='flex flex-col items-center gap-1'>
 									<MdPerson className='text-slate-400 text-2xl'/>
@@ -28,8 +29,8 @@ const MV = () => {
 						<div className="scale-[.68] xs:scale-90 sm:scale-100">
 							<BlobLink
 								to="skills"
-								frontColor="#F7FEE7"
-								backColor="#BEF264"
+								frontClass="fill-lime-50 hover:fill-lime-100"
+								backClass="fill-lime-300"
 							>
 								<div className='flex flex-col items-center gap-1 text-lime-700'>
 									<MdCode className='text-2xl'/>
@@ -40,8 +41,8 @@ const MV = () => {
 						<div className="scale-[.68] xs:scale-90 sm:scale-100">
 							<BlobLink
 								to="works"
-								frontColor="#F0F9FF"
-								backColor="#7DD3FC"
+								frontClass="fill-sky-50 hover:fill-sky-100"
+								backClass="fill-sky-300"
 							>
 								<div className='flex flex-col items-center gap-1  text-sky-700'>
 									<MdSource className='text-2xl'/>
@@ -52,8 +53,8 @@ const MV = () => {
 						<div className="scale-[.68] xs:scale-90 sm:scale-100">
 							<BlobLink
 								to="blog"
-								frontColor="#FEFCE8"
-								backColor="#FDE047"
+								frontClass="fill-yellow-50 hover:fill-yellow-100"
+								backClass="fill-yellow-300"
 							>
 								<div className='flex flex-col items-center gap-1 text-yellow-700'>
 									<MdArticle className='text-2xl'/>

@@ -36,15 +36,15 @@ const shuffleArray = (array: any[]) => {
 	return copiedArray;
 }
 
-const Blob = ({ color }: { color: string }) => {
+const Blob = ({ className }: { className: string }) => {
 	const randomD = shuffleArray(dAttributeList)
 	const dValues = randomD.join('; ').concat(`; ${randomD[0]}`)
 
 	return (
 		<>
-			<div className="relative w-full">
-				<svg viewBox="0 0 100 100" className="absolute top-0 left-0 w-full h-auto">
-					<path fill={color} d={randomD[0]}>
+			<div className={`relative w-full ${className}`}>
+				<svg viewBox="0 0 100 100" className="absolute top-0 left-0 w-full h-auto transition-colors">
+					<path d={randomD[0]}>
 						<animate
 							attributeName="d"
 							dur="200s"
