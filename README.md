@@ -1,7 +1,7 @@
-
 <a href="https://megaichi.com" target="_blank" rel="noreferrer">
 	<p align="center">
-		<img src="https://images.microcms-assets.io/assets/075f93e139564d86bca79b05b8661b85/48418a7551e047f69692ced55c24fff6/pf-title.svg" alt="メガいち" width="320" height="80" />
+		<img src="https://images.microcms-assets.io/assets/c121738bec2f42b2940446f9a0dc7985/8b55e0803eb14fbfa963c168eecf6ead/favicon.svg" alt="Logo" width="120" height="80" />
+		<img src="https://images.microcms-assets.io/assets/c121738bec2f42b2940446f9a0dc7985/2d7c11d4bd5f4d4a810cd86848fbaef1/pf-title.svg" alt="メガいち" width="320" height="80" />
 	</p>
 </a>
 
