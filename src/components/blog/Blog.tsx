@@ -1,3 +1,4 @@
+import { MdOpenInNew } from "react-icons/md";
 import { SiZenn } from "react-icons/si";
 
 import type { Zenn } from "@/libs/type";
@@ -27,10 +28,13 @@ const Blog = async () => {
 						{zennArticles.map((article) => {
 							return (
 								<div key={article.keyDate} className="relative w-full drop-shadow-md bg-white hover:bg-slate-100 rounded-xl transition-colors">
-									<a href={article.url} target="_blank" rel="noreferrer" className="w-full sm:h-40 min-h-0 flex flex-col items-start justify-between gap-1 sm:gap-4 p-6">
+									<a href={article.url} target="_blank" rel="noreferrer" className="flex flex-col items-start justify-between gap-1 sm:gap-4 w-full sm:h-40 min-h-0 p-6">
 										<h3 className="my-1 text-xl">{article.title}</h3>
-										<div className="flex flex-row items-center gap-2 text-slate-500">
-											<SiZenn className="text-[#3EA8FF]"/><div className="mr-4">{article.service}</div><div>{article.dateString}</div>
+										<div className="flex flex-row items-center justify-between w-full">
+											<div className="flex flex-row items-center gap-2 text-slate-500">
+												<SiZenn className="text-[#3EA8FF]"/><div className="mr-4">{article.service}</div><div>{article.dateString}</div>
+											</div>
+											<MdOpenInNew className="text-lg text-slate-400"/>
 										</div>
 									</a>
 								</div>
