@@ -78,7 +78,7 @@ const HeaderNav = () => {
 
 	return (
 		<>
-			<button className='md:hidden z-[80] text-2xl' onClick={() => {isOpen ? setIsOpen(false) : setIsOpen(true)}}>{isOpen ? <MdClose /> : <MdMenu />}</button>
+			<button className='md:hidden z-[80] text-2xl' aria-label="Navigation menu" onClick={() => {isOpen ? setIsOpen(false) : setIsOpen(true)}}>{isOpen ? <MdClose /> : <MdMenu />}</button>
 			<div className={`fixed md:static top-0 right-0 pt-14 md:pt-0 w-60 md:w-auto h-screen md:h-auto transition-transform ${isWide? "hidden md:block" : `block bg-white ${isOpen ? "" : "translate-x-[16rem]"}`}`}>
 				<div id='focus' className="fixed top-0 left-0 z-[60] rounded transition-all" style={focusStyle}></div>
 				<nav className="relative z-[70] flex flex-col md:flex-row items-center justify-center gap-8 text-slate-800">
