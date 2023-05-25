@@ -22,7 +22,7 @@ const MV = () => {
 							>
 								<div className='flex flex-col items-center gap-1'>
 									<MdPerson className='text-slate-400 text-2xl'/>
-									<h3 className='text-slate-800'>自分について</h3>
+									<span className='text-slate-800'>自分について</span>
 								</div>
 							</BlobLink>
 						</div>
@@ -34,7 +34,7 @@ const MV = () => {
 							>
 								<div className='flex flex-col items-center gap-1 text-lime-700'>
 									<MdCode className='text-2xl'/>
-									<h3>出来ること</h3>
+									<span>出来ること</span>
 								</div>
 							</BlobLink>
 						</div>
@@ -46,7 +46,7 @@ const MV = () => {
 							>
 								<div className='flex flex-col items-center gap-1  text-sky-700'>
 									<MdSource className='text-2xl'/>
-									<h3>作ったもの</h3>
+									<span>作ったもの</span>
 								</div>
 							</BlobLink>
 						</div>
@@ -58,7 +58,7 @@ const MV = () => {
 							>
 								<div className='flex flex-col items-center gap-1 text-yellow-700'>
 									<MdArticle className='text-2xl'/>
-									<h3>投稿記事</h3>
+									<span>投稿記事</span>
 								</div>
 							</BlobLink>
 						</div>
